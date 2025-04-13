@@ -19,7 +19,7 @@ This repository contains two header files, `datastructs.h` and `algorithms.h`, w
 
 This library provides implementations of advanced data structures and algorithms. It is designed for educational purposes, competitive programming, and general use in C++ projects.
 
-Detailed documentation is available [here](./Docs/html/index.html)
+Detailed documentation is available [here](https://amorphousshape.github.io/CPP-Structs-Algorithms/)
 
 ---
 
