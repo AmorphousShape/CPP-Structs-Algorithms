@@ -1115,6 +1115,24 @@ template<typename keyType, typename valueType> class RBNode {
     }
 };
 
+/**
+ * @brief Implements a Red-Black Tree
+ * 
+ * @tparam keyType The type of key stored in the tree
+ * @tparam valueType The type of value stored in the tree
+ * 
+ * @details This class implements a Red-Black Tree, a self-balancing binary search tree. It maintains balance using rotations and recoloring during insertions and deletions, ensuring efficient operations with a time complexity of O(log n).
+ * 
+ * The tree has the following properties:
+ * - Each node has a color (Red or Black).
+ * - The root node is always Black.
+ * - Red nodes cannot have Red children (no two consecutive Red nodes).
+ * - Every path from a node to its descendant nil nodes has the same number of Black nodes (Black height).
+ * - The nil node (a sentinel node representing the end of the tree) is always Black.
+ * 
+ * These properties ensure that the tree remains approximately balanced, 
+ * making it suitable for applications requiring fast lookups, insertions, and deletions.
+ */
 template<typename keyType, typename valueType> class RBTree {
     public:
 

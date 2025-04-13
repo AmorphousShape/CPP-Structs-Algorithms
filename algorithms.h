@@ -620,20 +620,26 @@ class Matrix {
         }
     }
 
-    // Clear data
+    /**
+     * @brief Clears the matrix data
+     */
     void clear() {
         row = -1;
         col = -1;
         data.clear();
     }
 
-    // Print data
-    void print() {
+    /**
+     * @brief Prints the matrix
+     * 
+     * @param out Output stream to print to (default is cout)
+     */
+    void print(ostream &out = cout) {
         for (int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
-                cout << data[i][j] << " ";
+                out << data[i][j] << " ";
             }
-            cout << endl;
+            out << endl;
         }
     }
 };

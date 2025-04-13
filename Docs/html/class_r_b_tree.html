@@ -110,12 +110,16 @@ $(function(){initNavTree('class_r_b_tree.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>Implements a Red-Black Tree.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="datastructs_8h_source.html">datastructs.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0626b6bbc90feb0f2cb5923b3ba71381" id="r_a0626b6bbc90feb0f2cb5923b3ba71381"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0626b6bbc90feb0f2cb5923b3ba71381">RBTree</a> ()</td></tr>
-<tr class="memdesc:a0626b6bbc90feb0f2cb5923b3ba71381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <br /></td></tr>
+<tr class="memitem:a0626b6bbc90feb0f2cb5923b3ba71381" id="r_a0626b6bbc90feb0f2cb5923b3ba71381"><td class="memItemLeft" align="right" valign="top"><a id="a0626b6bbc90feb0f2cb5923b3ba71381" name="a0626b6bbc90feb0f2cb5923b3ba71381"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RBTree</b> ()</td></tr>
+<tr class="memdesc:a0626b6bbc90feb0f2cb5923b3ba71381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
 <tr class="separator:a0626b6bbc90feb0f2cb5923b3ba71381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1c5eeaf33f1e6ed0ddf3d196ac38bad" id="r_ad1c5eeaf33f1e6ed0ddf3d196ac38bad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1c5eeaf33f1e6ed0ddf3d196ac38bad">RBTree</a> (keyType k, valueType v)</td></tr>
 <tr class="memdesc:ad1c5eeaf33f1e6ed0ddf3d196ac38bad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a tree with a single node with key k and value v.  <br /></td></tr>
@@ -123,8 +127,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3de58f2af6995d12cad5bcf94699e3d6" id="r_a3de58f2af6995d12cad5bcf94699e3d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3de58f2af6995d12cad5bcf94699e3d6">RBTree</a> (keyType *k, valueType *v, int s)</td></tr>
 <tr class="memdesc:a3de58f2af6995d12cad5bcf94699e3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a tree with arrays k and v as the insert values and size = s.  <br /></td></tr>
 <tr class="separator:a3de58f2af6995d12cad5bcf94699e3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b508e8251a3d96dde94e88a40980a1" id="r_a60b508e8251a3d96dde94e88a40980a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60b508e8251a3d96dde94e88a40980a1">RBTree</a> (const <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt; &amp;src)</td></tr>
-<tr class="memdesc:a60b508e8251a3d96dde94e88a40980a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor (deep copy)  <br /></td></tr>
+<tr class="memitem:a60b508e8251a3d96dde94e88a40980a1" id="r_a60b508e8251a3d96dde94e88a40980a1"><td class="memItemLeft" align="right" valign="top"><a id="a60b508e8251a3d96dde94e88a40980a1" name="a60b508e8251a3d96dde94e88a40980a1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RBTree</b> (const <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt; &amp;src)</td></tr>
+<tr class="memdesc:a60b508e8251a3d96dde94e88a40980a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor (deep copy) <br /></td></tr>
 <tr class="separator:a60b508e8251a3d96dde94e88a40980a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a766b03d225fe977fd52ffcf24998bbf2" id="r_a766b03d225fe977fd52ffcf24998bbf2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a766b03d225fe977fd52ffcf24998bbf2">~RBTree</a> ()</td></tr>
 <tr class="memdesc:a766b03d225fe977fd52ffcf24998bbf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
@@ -169,38 +174,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a5fc14632bf7705dc544ff6a473f80d07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the predecessor of the node with key k and returns a pointer to its key.  <br /></td></tr>
 <tr class="separator:a5fc14632bf7705dc544ff6a473f80d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a0626b6bbc90feb0f2cb5923b3ba71381" name="a0626b6bbc90feb0f2cb5923b3ba71381"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0626b6bbc90feb0f2cb5923b3ba71381">&#9670;&#160;</a></span>RBTree() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename keyType, typename valueType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt;<a class="el" href="class_r_b_tree.html">::RBTree</a> </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Default constructor. </p>
-
-</div>
-</div>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;typename keyType, typename valueType&gt;<br />
+class RBTree&lt; keyType, valueType &gt;</div><p>Implements a Red-Black Tree. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">keyType</td><td>The type of key stored in the tree </td></tr>
+    <tr><td class="paramname">valueType</td><td>The type of value stored in the tree</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This class implements a Red-Black Tree, a self-balancing binary search tree. It maintains balance using rotations and recoloring during insertions and deletions, ensuring efficient operations with a time complexity of O(log n).</p>
+<p>The tree has the following properties:</p><ul>
+<li>Each node has a color (Red or Black).</li>
+<li>The root node is always Black.</li>
+<li>Red nodes cannot have Red children (no two consecutive Red nodes).</li>
+<li>Every path from a node to its descendant nil nodes has the same number of Black nodes (Black height).</li>
+<li>The nil node (a sentinel node representing the end of the tree) is always Black.</li>
+</ul>
+<p>These properties ensure that the tree remains approximately balanced, making it suitable for applications requiring fast lookups, insertions, and deletions. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad1c5eeaf33f1e6ed0ddf3d196ac38bad" name="ad1c5eeaf33f1e6ed0ddf3d196ac38bad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1c5eeaf33f1e6ed0ddf3d196ac38bad">&#9670;&#160;</a></span>RBTree() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1c5eeaf33f1e6ed0ddf3d196ac38bad">&#9670;&#160;</a></span>RBTree() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -241,7 +236,7 @@ template&lt;typename keyType, typename valueType&gt; </div>
 </div>
 </div>
 <a id="a3de58f2af6995d12cad5bcf94699e3d6" name="a3de58f2af6995d12cad5bcf94699e3d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3de58f2af6995d12cad5bcf94699e3d6">&#9670;&#160;</a></span>RBTree() <span class="overload">[3/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de58f2af6995d12cad5bcf94699e3d6">&#9670;&#160;</a></span>RBTree() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,35 +280,6 @@ template&lt;typename keyType, typename valueType&gt; </div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a60b508e8251a3d96dde94e88a40980a1" name="a60b508e8251a3d96dde94e88a40980a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60b508e8251a3d96dde94e88a40980a1">&#9670;&#160;</a></span>RBTree() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename keyType, typename valueType&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt;<a class="el" href="class_r_b_tree.html">::RBTree</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>src</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Copy constructor (deep copy) </p>
 
 </div>
 </div>
@@ -801,7 +767,7 @@ template&lt;typename keyType, typename valueType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_r_b_tree.html">RBTree</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sun Apr 13 2025 07:30:43 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>
