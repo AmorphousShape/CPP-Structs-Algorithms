@@ -209,7 +209,7 @@ class Fib {
      * 
      * @param n The integer value for which to calculate and print the Fibonacci number
      */
-    void print(int n) {
+    void print(int n, ostream &out = cout) {
         // Unsigned 128-bit int is too large to print, so split it into two unsigned 64-bit ints for output
         __uint64_t a, b;
 
@@ -219,14 +219,14 @@ class Fib {
         a = (__uint64_t)(f >> 64);
         b = (__uint64_t)f;
 
-        cout << "fib(" << n << ") = ";
+        out << "fib(" << n << ") = ";
 
         // Print most significant 64 bits if there are any
         if (a != 0) {
-            cout << a;
+            out << a;
         }
         // Print least significant 64 bits
-        cout << b << endl;
+        out << b << endl;
     }
 
     /**
@@ -234,7 +234,7 @@ class Fib {
      * 
      * @param n Max number to print Fibonacci numbers for (inclusive) (max 185)
      */
-    void printAll(int n) {
+    void printAll(int n, ostream &out = cout) {
 
         if (n > 185) {
             throw runtime_error("Cannot print Fibonacci numbers greater than 185 with unsigned 128-bit int\n");
@@ -242,7 +242,7 @@ class Fib {
 
         // Print all fibonacci numbers up to n (inclusive)
         for (int i = 0; i < n; i++) {
-            print(i);
+            print(i, out);
         }
     }
 };
