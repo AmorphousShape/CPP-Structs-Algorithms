@@ -1,6 +1,8 @@
 # C++ Data Structures and Algorithms Library
 
-This repository contains two header files, `datastructs.h` and `algorithms.h`, which implement a variety of data structures and algorithms in C++. These files are designed to be modular and reusable for various computational tasks.
+[![Algorithms](https://github.com/AmorphousShape/CPP-Structs-Algorithms/actions/workflows/algorithms_test.yml/badge.svg)](https://github.com/AmorphousShape/CPP-Structs-Algorithms/actions/workflows/algorithms_test.yml) [![Data Structs](https://github.com/AmorphousShape/CPP-Structs-Algorithms/actions/workflows/datastructs_test.yml/badge.svg)](https://github.com/AmorphousShape/CPP-Structs-Algorithms/actions/workflows/datastructs_test.yml)
+
+This repository contains two header files, `datastructs.hpp` and `algorithms.hpp`, which implement a variety of data structures and algorithms in C++. These files are designed to be modular and reusable for various computational tasks.
 
 ---
 
@@ -83,8 +85,8 @@ This file contains implementations of the following algorithms:
 1. Include the desired header file in your C++ project:
 
 ```cpp
-    #include "datastructs.h"
-    #include "algorithms.h"
+    #include "datastructs.hpp"
+    #include "algorithms.hpp"
 ```
 
 ## Examples
@@ -92,7 +94,7 @@ This file contains implementations of the following algorithms:
 ### Example 1: Circular Dynamic Array
 
 ```cpp
-    #include "datastructs.h"
+    #include "datastructs.hpp"
 
     int main() {
         CircularDynamicArray<int> cda;
@@ -110,7 +112,7 @@ This file contains implementations of the following algorithms:
 ### Example 2: Solving 0-1 Knapsack
 
 ```cpp
-    #include "algorithms.h"
+    #include "algorithms.hpp"
 
     int main() {
         int profits[] = {0, 60, 100, 120}; // 1-indexed
