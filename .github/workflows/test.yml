@@ -18,7 +18,7 @@ jobs:
 
       - name: Build and Run APSP Test
         run: |
-          gcc -o apsp_tester tests/apsp_test.cpp -I./include -L./lib -lm
+          g++ -o apsp_tester tests/apsp_test.cpp -I./include -L./lib -lm
           ./apsp_tester
   
   cda-test:
@@ -29,7 +29,7 @@ jobs:
 
       - name: Build and Run CDA Test
         run: |
-          gcc -o cda_tester tests/cda_test.cpp -I./include -L./lib -lm
+          g++ -o cda_tester tests/cda_test.cpp -I./include -L./lib -lm
           ./cda_tester
     
   fib-test:
@@ -40,7 +40,7 @@ jobs:
 
       - name: Build and Run Fibonacci Test
         run: |
-          gcc -o fib_tester tests/fib_test.cpp -I./include -L./lib -lm
+          g++ -o fib_tester tests/fib_test.cpp -I./include -L./lib -lm
           ./fib_tester
 
   heap-test:
@@ -51,7 +51,7 @@ jobs:
 
       - name: Build and Run Heap Test
         run: |
-          gcc -o heap_tester tests/heap_test.cpp -I./include -L./lib -lm
+          g++ -o heap_tester tests/heap_test.cpp -I./include -L./lib -lm
           ./heap_tester
   
   knapsack-test:
@@ -62,7 +62,7 @@ jobs:
 
       - name: Build and Run Knapsack Test
         run: |
-          gcc -o knapsack_tester tests/knapsack_test.cpp -I./include -L./lib -lm
+          g++ -o knapsack_tester tests/knapsack_test.cpp -I./include -L./lib -lm
           ./knapsack_tester
 
   lcs-test:
@@ -73,7 +73,7 @@ jobs:
 
       - name: Build and Run LCS Test
         run: |
-          gcc -o lcs_tester tests/lcs_test.cpp -I./include -L./lib -lm
+          g++ -o lcs_tester tests/lcs_test.cpp -I./include -L./lib -lm
           ./lcs_tester
     
   matrix-chain-test:
@@ -84,7 +84,7 @@ jobs:
 
       - name: Build and Run Matrix Chain Test
         run: |
-          gcc -o matrix_chain_tester tests/matrix_chain_test.cpp -I./include -L./lib -lm
+          g++ -o matrix_chain_tester tests/matrix_chain_test.cpp -I./include -L./lib -lm
           ./matrix_chain_tester
 
   rb-tree-test:
@@ -95,5 +95,5 @@ jobs:
 
       - name: Build and Run RB-Tree Test
         run: |
-          gcc -o rb_tree_tester tests/rb_tree_test.cpp -I./include -L./lib -lm
+          g++ -o rb_tree_tester tests/rb_tree_test.cpp -I./include -L./lib -lm
           ./rb_tree_tester
