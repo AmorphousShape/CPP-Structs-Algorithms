@@ -33,3 +33,4 @@
 
 # VS Code
 .DS_STORE
+.vscode

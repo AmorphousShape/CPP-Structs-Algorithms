@@ -134,8 +134,10 @@ class APSP {
 
     /**
      * @brief Prints the adjacency matrix of the graph
+     * 
+     * @param out Output stream to print to (default is cout)
      */
-    void printAdjacency() {
+    void printAdjacency(ostream &out = cout) {
         if (!built) {
             build();
         }

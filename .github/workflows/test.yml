@@ -1,0 +1,99 @@
+name: C/C++ Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Run an individual test for each data structure and each algorithm
+jobs:
+  apsp-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run APSP Test
+        run: |
+          gcc -o apsp_tester tests/apsp_test.cpp -I./include -L./lib -lm
+          ./apsp_tester
+  
+  cda-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run CDA Test
+        run: |
+          gcc -o cda_tester tests/cda_test.cpp -I./include -L./lib -lm
+          ./cda_tester
+    
+  fib-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run Fibonacci Test
+        run: |
+          gcc -o fib_tester tests/fib_test.cpp -I./include -L./lib -lm
+          ./fib_tester
+
+  heap-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run Heap Test
+        run: |
+          gcc -o heap_tester tests/heap_test.cpp -I./include -L./lib -lm
+          ./heap_tester
+  
+  knapsack-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run Knapsack Test
+        run: |
+          gcc -o knapsack_tester tests/knapsack_test.cpp -I./include -L./lib -lm
+          ./knapsack_tester
+
+  lcs-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run LCS Test
+        run: |
+          gcc -o lcs_tester tests/lcs_test.cpp -I./include -L./lib -lm
+          ./lcs_tester
+    
+  matrix-chain-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run Matrix Chain Test
+        run: |
+          gcc -o matrix_chain_tester tests/matrix_chain_test.cpp -I./include -L./lib -lm
+          ./matrix_chain_tester
+
+  rb-tree-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run RB-Tree Test
+        run: |
+          gcc -o rb_tree_tester tests/rb_tree_test.cpp -I./include -L./lib -lm
+          ./rb_tree_tester
