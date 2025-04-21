@@ -1,0 +1,43 @@
+name: Data Structs
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cda-test:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Build and Run CDA Test
+      run: |
+        g++ -o cda_tester tests/cda_test.cpp -I./include -L./lib -lm
+        ./cda_tester
+
+  heap-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run Heap Test
+        run: |
+          g++ -o heap_tester tests/heap_test.cpp -I./include -L./lib -lm
+          ./heap_tester
+  
+  rb-tree-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run RB-Tree Test
+        run: |
+          g++ -o rb_tree_tester tests/rb_tree_test.cpp -I./include -L./lib -lm
+          ./rb_tree_tester
