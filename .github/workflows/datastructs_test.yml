@@ -10,15 +10,15 @@ on:
 
 jobs:
   cda-test:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Build and Run CDA Test
-      run: |
-        g++ -o cda_tester tests/cda_test.cpp -I./include -L./lib -lm
-        ./cda_tester
+      - name: Build and Run CDA Test
+        run: |
+          g++ -o cda_tester tests/cda_test.cpp -I./include -L./lib -lm
+          ./cda_tester
 
   heap-test:
     runs-on: ubuntu-latest
