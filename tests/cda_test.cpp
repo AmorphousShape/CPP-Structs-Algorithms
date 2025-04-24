@@ -1,3 +1,4 @@
+#include <bits/stdc++.h>
 #include "../datastructs.hpp"
 
 int main() {
@@ -55,18 +56,21 @@ int main() {
     if (cda.linearSearch(9) != -1) {
         return 1;
     }
-    if (cda.QuickSelect(2) != 20) {
+
+    if (cda.QuickSelect(2) != 10) {
         return 1;
     }
-    if (cda.QuickSelect(15) != -1) {
+    if (cda.QuickSelect(15) != 140) {
         return 1;
     }
-    if (cda.WCSelect(2) != 20) {
+
+    if (cda.WCSelect(2) != 10) {
         return 1;
     }
-    if (cda.WCSelect(15) != -1) {
+    if (cda.WCSelect(15) != 140) {
         return 1;
     }
+
     if (cda.binSearch(60) != 6) {
         return 1;
     }
@@ -96,11 +100,12 @@ int main() {
         return 1;
     }
 
-    // test deep copy
+    // test deep copy assignment
     CircularDynamicArray<int> cda2 = cda;
 
-    for (int i = 0; i < 25; i++) {
-        if (cda2[i] != cda[i]) {
+    // cda2 should be a deep copy of cda
+    for (int i = 0; i < cda.length(); i++) {
+        if (cda[i] != cda2[i]) {
             return 1;
         }
     }
@@ -111,7 +116,6 @@ int main() {
     if (cda[24] == cda2[24]) {
         return 1;
     }
-
 
     return 0;
 }

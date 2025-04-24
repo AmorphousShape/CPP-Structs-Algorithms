@@ -65,7 +65,7 @@ template <typename elmtype> class CircularDynamicArray {
         start = src.start;
         end = src.end;
         elmtype *tempInfo = new elmtype[cap];
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < cap; i++) {
             tempInfo[i] = src.info[i];
         }
         info = tempInfo;
@@ -128,7 +128,7 @@ template <typename elmtype> class CircularDynamicArray {
         end = R.end;
         delete[] info;
         info = new elmtype[cap];
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < cap; i++) {
             info[i] = R.info[i];
         }
         return *this;
@@ -197,7 +197,7 @@ template <typename elmtype> class CircularDynamicArray {
         size = 0;
         cap = 2;
         start = 0;
-        end = 0;
+        end = -1;
         delete[] info;
         info = new elmtype[cap];
     };
@@ -319,7 +319,7 @@ template <typename elmtype> class CircularDynamicArray {
     /**
      * @brief Burner element for error handling
      */
-    int burner;
+    elmtype burner;
 
     /**
      * @brief The type of search to perform in the select function
