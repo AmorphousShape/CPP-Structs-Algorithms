@@ -1,4 +1,3 @@
-#include <bits/stdc++.h>
 #include "../datastructs.hpp"
 
 int main() {
