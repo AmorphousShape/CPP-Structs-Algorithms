@@ -630,6 +630,13 @@ template<typename keyType> class Heap {
     }
 
     /**
+     * @brief Returns the size of the heap
+     */
+    int size() {
+        return info->length();
+    }
+
+    /**
      * @brief Returns the minimum key in the heap
      * 
      * @details Time complexity: O(1)
@@ -654,12 +661,17 @@ template<typename keyType> class Heap {
 
     /**
      * @brief Prints all keys in the heap in level order
+     * 
+     * @param out The output stream to print to, defaulting to cout
      */
-    void printKey() {
+    void printKeys(ostream & out = cout) {
         for (int i = 0; i < info->length(); i++) {
-            cout << (*info)[i] << " ";
+            out << (*info)[i];
+            if (i != info->length() - 1) {
+                out << " ";
+            }
         }
-        if (info->length() != 0) {cout << endl;}
+        if (info->length() != 0) {out << endl;}
     }
 
     /**
@@ -718,7 +730,7 @@ template<typename keyType> class Heap {
      * @param i The index of the node to sift up
      */
     void siftUp(int i) {
-        for (i; i != 0 && (*info)[i] < (*info)[pIndex(i)]; i = pIndex(i)) {
+        for (; i != 0 && (*info)[i] < (*info)[pIndex(i)]; i = pIndex(i)) {
             swap(i, pIndex(i));
         }
     }
@@ -954,45 +966,56 @@ template<typename keyType, typename valueType> class RBNode {
 
     /**
      * @brief Prints the preorder traversal of the tree
+     * 
+     * @param out The output stream to print, default is cout
      */
-    void preorder () {
+    void preorder (ostream &out = cout) {
         if (key == nullptr) {
             return;
         }
-        printNode();
-        if (l->key != nullptr) {cout << " "; l->preorder();}
-        if (r->key != nullptr) {cout << " "; r->preorder();}
+        printNode(out);
+        if (l->key != nullptr) {out << " "; l->preorder(out);}
+        if (r->key != nullptr) {out << " "; r->preorder(out);}
     }
     
     /**
      * @brief Prints the inorder traversal of the tree
+     * 
+     * @param out The output stream to print, default is cout
      */
-    void inorder () {
+    void inorder (ostream &out = cout) {
         if (key == nullptr) {
             return;
         }
-        if (l->key != nullptr) {l->inorder(); cout << " ";}
-        printNode();
-        if (r->key != nullptr) {cout << " "; r->inorder();}
+        if (l->key != nullptr) {l->inorder(out); out << " ";}
+        printNode(out);
+        if (r->key != nullptr) {out << " "; r->inorder(out);}
     }
 
     /**
      * @brief Prints the postorder traversal of the tree
+     * 
+     * @param out The output stream to print, default is cout
      */
-    void postorder () {
+    void postorder (ostream &out = cout) {
         if (key == nullptr) {
             return;
         }
-        if (l->key != nullptr) {l->postorder(); cout << " ";}
-        if (r->key != nullptr) {r->postorder(); cout << " ";}
-        printNode();
+        if (l->key != nullptr) {l->postorder(out); out << " ";}
+        if (r->key != nullptr) {r->postorder(out); out << " ";}
+        printNode(out);
     }
 
     /**
      * @brief Prints the node's key
+     * 
+     * @param out The output stream to print, default is cout
      */
-    void printNode() {
-        cout << *key;
+    void printNode(ostream &out = cout) {
+        if (key == nullptr) {
+            return;
+        }
+        out << *key;
     }
 
     /**
@@ -1002,24 +1025,24 @@ template<typename keyType, typename valueType> class RBNode {
      * 
      * @param k The number of elements to print
      */
-    void printk(int &k) {
+    void printk(int &k, ostream &out = cout) {
         if (l->key != nullptr) {
-            l->printk(k);
+            l->printk(k, out);
             if (k > 0) {
-                cout << " ";
+                out << " ";
             }
         }
         if (k < 1) {
             return;
         }
-        cout << *key;
+        out << *key;
         k--;
         if (k < 1) {
             return;
         }
         if (r->key != nullptr) {
-            cout << " ";
-            r->printk(k);
+            out << " ";
+            r->printk(k, out);
         }
     }
 
@@ -1033,15 +1056,24 @@ template<typename keyType, typename valueType> class RBNode {
      * @return A pointer to the value of the node with key k, or nullptr if the key is not found
      */
     valueType *searchValue(keyType k) {
-        if (k == *key) {
-            return val;
-        } else if (k < *key && l != nullptr) {
-            return l->searchValue(k);
-        } else if (k > *key && r != nullptr) {
-            return r->searchValue(k);
-        } else {
+
+        if (key == nullptr) {
             return nullptr;
         }
+
+        if (k == *key) {
+            return val;
+        }
+        
+        if (k < *key && l != nullptr) {
+            return l->searchValue(k);
+        }
+        
+        if (k > *key && r != nullptr) {
+            return r->searchValue(k);
+        }
+        
+        return nullptr;
     }
 
     /**
@@ -1222,9 +1254,9 @@ template<typename keyType, typename valueType> class RBTree {
      * 
      * @details This function prints the preorder traversal of the tree. It calls the root's preorder function, which prints the nodes in preorder. Time complexity: O(n)
      */
-    void preorder () {
-        root->preorder();
-        cout << endl;
+    void preorder (ostream &out) {
+        root->preorder(out);
+        out << endl;
     }
     
     /**
@@ -1232,9 +1264,9 @@ template<typename keyType, typename valueType> class RBTree {
      * 
      * @details This function prints the inorder traversal of the tree. It calls the root's inorder function, which prints the nodes in inorder. Time complexity: O(n)
      */
-    void inorder () {
-        root->inorder();
-        cout << endl;
+    void inorder (ostream &out) {
+        root->inorder(out);
+        out << endl;
     }
 
     /**
@@ -1242,9 +1274,9 @@ template<typename keyType, typename valueType> class RBTree {
      * 
      * @details This function prints the postorder traversal of the tree. It calls the root's postorder function, which prints the nodes in postorder. Time complexity: O(n)
      */
-    void postorder () {
-        root->postorder();
-        cout << endl;
+    void postorder (ostream &out) {
+        root->postorder(out);
+        out << endl;
     }
     
     /**
@@ -1252,9 +1284,9 @@ template<typename keyType, typename valueType> class RBTree {
      * 
      * @details This function prints the K smallest elements of the tree. It calls the root's printk function, which prints the K smallest elements in preorder traversal. Time complexity: O(k + lg(size))
      */
-    void printk (int k) {
-        root->printk(k);
-        cout << endl;
+    void printk (int k, ostream &out) {
+        root->printk(k, out);
+        out << endl;
     }
 
     /**
@@ -1288,7 +1320,6 @@ template<typename keyType, typename valueType> class RBTree {
      * @param v The value of the new node
      */
     void insert(keyType k, valueType v) {
-        
         RBNode<keyType, valueType> *z = new RBNode<keyType, valueType>(k, v);
         z->size = 1;
         z->l = nil; z->r = nil;
@@ -1533,7 +1564,7 @@ template<typename keyType, typename valueType> class RBTree {
      * @return A pointer to the largest node in the tree
      */
     RBNode<keyType, valueType> *max(RBNode<keyType, valueType> *node) {
-        for (node; node->r != nil; node = node->r) {
+        for (; node->r != nil; node = node->r) {
             continue;
         }
         return node;
