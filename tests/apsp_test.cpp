@@ -1,6 +1,6 @@
 #include "../algorithms.hpp"
 
-#include <iostream>
+#include <cassert>
 
 int main () {
     APSP *apsp = new APSP(5);
@@ -50,24 +50,16 @@ int main () {
     apsp->addEdge(4, 3, 6);
 
     // 0->1 = 1
-    if (apsp->getCost(0, 1) != 1) {
-        return 1;
-    }
+    assert(apsp->getCost(0, 1) == 1);
 
     // No path exists to 0, only from 0
-    if (apsp->getCost(4, 0) != INT_MAX) {
-        return 1;
-    }
+    assert(apsp->getCost(4, 0) == INT_MAX);
 
     // 0->1 = 1, 1->4 = 4, 1 + 4 = 5
-    if (apsp->getCost(0, 4) != 5) {
-        return 1;
-    }
+    assert(apsp->getCost(0, 4) == 5);
 
     // 1->4 = 4, 4->3 = 6, 4 + 6 = 10
-    if (apsp->getCost(1, 3) != 10) {
-        return 1;
-    }
-    
+    assert(apsp->getCost(1, 3) == 10);
+
     return 0;
 }
