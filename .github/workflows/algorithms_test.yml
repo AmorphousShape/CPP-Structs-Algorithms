@@ -64,3 +64,14 @@ jobs:
         run: |
           g++ -o matrix_chain_tester tests/matrix_chain_test.cpp -I./include -L./lib -lm
           ./matrix_chain_tester
+
+  world-series-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and Run World Series Test
+        run: |
+          g++ -o world_series_tester tests/world_series_test.cpp -I./include -L./lib -lm
+          ./world_series_tester
