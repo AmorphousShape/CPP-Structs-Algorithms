@@ -5,7 +5,7 @@
 #include <sstream>
 
 bool checkDoubleEqual(double a, double b) {
-    return (fabs(a - b) < 1e-9);
+    return (abs(a - b) < 1e-9);
 }
 
 int main() {
