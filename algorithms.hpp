@@ -5,7 +5,7 @@
  * 
  * @details This file includes the following algorithms:
  * * - All-Pairs Shortest Path (APSP)
- * * - Fibonacci Heap
+ * * - Fibonacci Number Calculator (Up to fib(185) with unsigned 128-bit int)
  * * - 0-1 Knapsack
  * * - Longest Common Subsequence (LCS)
  * * - Matrix Chain Multiplication
@@ -175,6 +175,10 @@ class Fib {
             throw runtime_error("Fibonacci number too large for unsigned 128-bit int\n");
         }
 
+        if (*n == 0) {
+            return 0;
+        }
+
         // Check if number is stored
         if (fibList[*n] != 0) {
             return fibList[*n];
@@ -197,7 +201,7 @@ class Fib {
      */
     Fib() {
         // Set first two fibonacci numbers and clear all other data in map
-        fibList[0] = 1;
+        fibList[0] = 0;
         fibList[1] = 1;
         for (int i = 2; i < 186; i++) {
             fibList[i] = 0;
@@ -210,23 +214,20 @@ class Fib {
      * @param n The integer value for which to calculate and print the Fibonacci number
      */
     void print(int n, ostream &out = cout) {
-        // Unsigned 128-bit int is too large to print, so split it into two unsigned 64-bit ints for output
-        __uint64_t a, b;
 
-        __uint128_t f = fib(&n);
-
-        // Split __uint128_t into two __uint64_t variables
-        a = (__uint64_t)(f >> 64);
-        b = (__uint64_t)f;
-
-        out << "fib(" << n << ") = ";
-
-        // Print most significant 64 bits if there are any
-        if (a != 0) {
-            out << a;
+        __uint128_t fibNum = fib(&n);
+        if (fibNum == 0) {
+            out << "fib(" << n << ") = 0\n";
+            return;
         }
-        // Print least significant 64 bits
-        out << b << endl;
+
+        string fibString;
+        while (fibNum > 0) {
+            fibString.insert(fibString.begin(), '0' + (fibNum % 10));
+            fibNum /= 10;
+        }
+
+        out << "fib(" << n << ") = " << fibString << endl;
     }
 
     /**
@@ -380,23 +381,23 @@ class Knapsack {
     /**
      * @brief Print the profits, weights, and objects chosen for the knapsack problem
      */
-    void printPWO() {
+    void printPWO(ostream &out = cout) {
         if (!built) {
             build();
         }
-        cout << "Profit: ";
+        out << "Profit: ";
         for (int i = 1; i <= n; i++) {
-            cout << profits[i] << " ";
+            out << profits[i] << " ";
         }
-        cout << endl;
-        cout << "Weight: ";
+        out << endl;
+        out << "Weight: ";
         for (int i = 1; i <= n; i++) {
-            cout << weights[i] << " ";
+            out << weights[i] << " ";
         }
-        cout << endl;
-        cout << "Objects Chosen: ";
+        out << endl;
+        out << "Objects Chosen: ";
         for (int i = 1; i <= n; i++) {
-            cout << objects[i] << " ";
+            out << objects[i] << " ";
         }
     }
 
@@ -457,22 +458,17 @@ class LCS {
          * @return The longest common subsequence built from the two strings
          */
         string build(int j, int k) {
-
-            // Base Cases
             if (j == 0 || k == 0) {
                 return "";
             }
-            
-            // If the characters are the same, add it to the LCS
-            if (s1[j-1] == s2[k-1]) {
-                return build(j - 1, k - 1) + s1[j-1];
+            if (s1[j - 1] == s2[k - 1]) {
+                return build(j - 1, k - 1) + s1[j - 1];
             }
-            
-            // If the characters are different, backtrack
-            if (L[j][k-1] == L[j][k]) {
+            if (L[j][k - 1] >= L[j - 1][k]) {
                 return build(j, k - 1);
+            } else {
+                return build(j - 1, k);
             }
-            return build(j - 1, k);
         }
 
     public:
@@ -483,11 +479,7 @@ class LCS {
          * @param a First string for which to find the LCS
          * @param b Second string for which to find the LCS
          */
-        LCS(string a, string b) {
-            s1 = a;
-            s2 = b;
-            built = false;
-        }
+        LCS(string a, string b) : s1(std::move(a)), s2(std::move(b)), built(false) {}
         
         /**
          * @brief Destructor for the LCS object
@@ -503,35 +495,26 @@ class LCS {
          * @return The longest common subsequence of the two strings
          */
         string get() {
-
             if (built) {
                 return foundLCS;
             }
-
-            // Populate vector with 0s
-            for (int i = 0; i <= s1.length(); i++) {
-                vector<int> temp;
-                for (int j = 0; j <= s2.length(); j++) {
-                    temp.push_back(0);
-                }
-                L.push_back(temp);
-            }
-
-            // LCS Algorithm
-            for (int j = 1; j <= s1.length(); j++) {
-                for (int k = 1; k <= s2.length(); k++) {
-                    if (s1[j-1] == s2[k-1]) {
-                        L[j][k] = L[j-1][k-1] + 1;
+    
+            int n = s1.length();
+            int m = s2.length();
+            L = vector<vector<int>>(n + 1, vector<int>(m + 1, 0));
+    
+            for (int j = 1; j <= n; j++) {
+                for (int k = 1; k <= m; k++) {
+                    if (s1[j - 1] == s2[k - 1]) {
+                        L[j][k] = L[j - 1][k - 1] + 1;
                     } else {
-                        L[j][k] = max(L[j-1][k], L[j][k-1]);
+                        L[j][k] = max(L[j - 1][k], L[j][k - 1]);
                     }
                 }
             }
-
-            // Set foundLCS for future use and update built
-            foundLCS = build(s1.length(), s2.length());
+    
+            foundLCS = build(n, m);
             built = true;
-
             return foundLCS;
         }
 
@@ -542,7 +525,7 @@ class LCS {
             if (!built) {
                 get();
             }
-            return foundLCS.length() - 1;
+            return foundLCS.length();
         }
 
         /**
@@ -574,6 +557,7 @@ class LCS {
             s1 = a;
             s2 = b;
             built = false;
+            foundLCS = "";
             L.clear();
         }
 };
@@ -610,16 +594,23 @@ class Matrix {
     /**
      * @brief Constructor with dimensions; initializes the matrix with 0s
      */
-    Matrix(int rows, int cols) {
-        row = rows;
-        col = cols;
-        for (int i = 0; i < rows; i++) {
-            vector<int> temp;
-            for (int j = 0; j < cols; j++) {
-                temp.push_back(0);
-            }
-            data.push_back(temp);
+    Matrix(int r, int c) : row(r), col(c), data(r, vector<int>(c, 0)) {}
+
+    /**
+     * @brief Equality operator for matrices
+     */
+    bool operator==(const Matrix &m) {
+        if (row != m.row || col != m.col) {
+            return false;
         }
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (data[i][j] != m.data[i][j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     /**
@@ -765,7 +756,10 @@ class MatrixChain {
                 continue;
             }
             if (m[i]->row != m[i-1]->col) {
-                throw runtime_error("Matrix dimensions do not match in MatrixChain constructor");
+                throw runtime_error(
+                    "Matrix dimensions do not match in MatrixChain constructor between matrices " + to_string(i-1) + " and " + to_string(i) + "\n" +
+                    "Row size " + to_string(m[i]->row) + " != Col size " + to_string(m[i-1]->col) + "\n"
+                );
                 return;
             }
         }
@@ -806,11 +800,15 @@ class MatrixChain {
  * 
  * @param n number of games in the series
  * @param aProb array of probabilities for team A to win each game
+ * 
+ * @note The array aProb must be of size 2n+1
+ * 
+ * @return The probability matrix for the world series; index [i][j] is the probability A gets at least i wins and B gets at least j wins
  */
-void worldSeries(int n, double *aProb) {
+vector<vector<double>> worldSeries(int n, double *aProb) {
 
-    // Create matrix
-    double x[n+1][n+1];
+    // Create matrix (Use vector as variable length array is not allowed in most compilers)
+    vector<vector<double>> x(n + 1, vector<double>(n + 1, 0.0));
     
     for (int i = 0; i <= n; i++) {
         for (int j = 0; j <= n; j++) {
@@ -832,14 +830,7 @@ void worldSeries(int n, double *aProb) {
         }
     }
 
-    // Print matrix
-    for (int i = 0 ; i < (n+1)*(n+1); i++) {
-        cout << x[i/(n+1)][i%(n+1)] << " ";
-        if (i % (n+1) == n) {
-            cout << endl;
-        }
-    }
-
+    return x;
 }
 
 #endif
