@@ -1,6 +1,5 @@
 #include "../algorithms.hpp"
 
-#include <vector>
 #include <cassert>
 
 int main() {
