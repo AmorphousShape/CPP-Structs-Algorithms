@@ -6,5 +6,6 @@ var class_heap =
     [ "extractMin", "class_heap.html#abe7e4eceddf03d0f9d36bfaccc4a0e0e", null ],
     [ "insert", "class_heap.html#a180b441cbe865325a0d0d898678a582a", null ],
     [ "peekKey", "class_heap.html#a7f2c1c5df7735ad0ce30f02cb428fee1", null ],
-    [ "printKey", "class_heap.html#a56ae92cbac366272d792f9e13fcd88ed", null ]
+    [ "printKeys", "class_heap.html#a87180eb7814638ac536a02af5d5443b7", null ],
+    [ "size", "class_heap.html#a9e96a3c8247e4f35937b1a80433dd0c9", null ]
 ];

@@ -113,7 +113,7 @@ $(function(){initNavTree('class_r_b_tree.html',''); initResizable(true); });
 <p>Implements a Red-Black Tree.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="datastructs_8h_source.html">datastructs.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="datastructs_8hpp_source.html">datastructs.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -137,18 +137,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0e10deb59bf471f7ad82c153cd950e0e" id="r_a0e10deb59bf471f7ad82c153cd950e0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e10deb59bf471f7ad82c153cd950e0e">operator=</a> (const <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt; &amp;R)</td></tr>
 <tr class="memdesc:a0e10deb59bf471f7ad82c153cd950e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy equals operator.  <br /></td></tr>
 <tr class="separator:a0e10deb59bf471f7ad82c153cd950e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b0514436414d5a9772dcdccede921ad" id="r_a2b0514436414d5a9772dcdccede921ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b0514436414d5a9772dcdccede921ad">preorder</a> ()</td></tr>
-<tr class="memdesc:a2b0514436414d5a9772dcdccede921ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the preorder traversal of the tree.  <br /></td></tr>
-<tr class="separator:a2b0514436414d5a9772dcdccede921ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ecaa8baa71c572dbb7e66fefc61ef6b" id="r_a1ecaa8baa71c572dbb7e66fefc61ef6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ecaa8baa71c572dbb7e66fefc61ef6b">inorder</a> ()</td></tr>
-<tr class="memdesc:a1ecaa8baa71c572dbb7e66fefc61ef6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the inorder traversal of the tree.  <br /></td></tr>
-<tr class="separator:a1ecaa8baa71c572dbb7e66fefc61ef6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd39f41fd4ef9d587f2e9ba84fa3da90" id="r_abd39f41fd4ef9d587f2e9ba84fa3da90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd39f41fd4ef9d587f2e9ba84fa3da90">postorder</a> ()</td></tr>
-<tr class="memdesc:abd39f41fd4ef9d587f2e9ba84fa3da90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the postorder traversal of the tree.  <br /></td></tr>
-<tr class="separator:abd39f41fd4ef9d587f2e9ba84fa3da90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eacd902c92d753ebd1a87e6e69cdd90" id="r_a9eacd902c92d753ebd1a87e6e69cdd90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9eacd902c92d753ebd1a87e6e69cdd90">printk</a> (int k)</td></tr>
-<tr class="memdesc:a9eacd902c92d753ebd1a87e6e69cdd90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the K smallest elements of the tree.  <br /></td></tr>
-<tr class="separator:a9eacd902c92d753ebd1a87e6e69cdd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f964115e4f37b0150c64b2bb73132ef" id="r_a1f964115e4f37b0150c64b2bb73132ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f964115e4f37b0150c64b2bb73132ef">preorder</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:a1f964115e4f37b0150c64b2bb73132ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the preorder traversal of the tree.  <br /></td></tr>
+<tr class="separator:a1f964115e4f37b0150c64b2bb73132ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58a342a6c017131baf42765f6fe6361" id="r_ac58a342a6c017131baf42765f6fe6361"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac58a342a6c017131baf42765f6fe6361">inorder</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:ac58a342a6c017131baf42765f6fe6361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the inorder traversal of the tree.  <br /></td></tr>
+<tr class="separator:ac58a342a6c017131baf42765f6fe6361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e754ed0139aaea16268b5debb8c17e2" id="r_a9e754ed0139aaea16268b5debb8c17e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e754ed0139aaea16268b5debb8c17e2">postorder</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:a9e754ed0139aaea16268b5debb8c17e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the postorder traversal of the tree.  <br /></td></tr>
+<tr class="separator:a9e754ed0139aaea16268b5debb8c17e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7281ceb79c0c60a6f94b7ee9648e988a" id="r_a7281ceb79c0c60a6f94b7ee9648e988a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7281ceb79c0c60a6f94b7ee9648e988a">printk</a> (int k, ostream &amp;out)</td></tr>
+<tr class="memdesc:a7281ceb79c0c60a6f94b7ee9648e988a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the K smallest elements of the tree.  <br /></td></tr>
+<tr class="separator:a7281ceb79c0c60a6f94b7ee9648e988a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a641fbb2ef33d68c965204e19c9ea1b86" id="r_a641fbb2ef33d68c965204e19c9ea1b86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a641fbb2ef33d68c965204e19c9ea1b86">size</a> ()</td></tr>
 <tr class="memdesc:a641fbb2ef33d68c965204e19c9ea1b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the tree.  <br /></td></tr>
 <tr class="separator:a641fbb2ef33d68c965204e19c9ea1b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -314,8 +314,8 @@ template&lt;typename keyType, typename valueType&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1ecaa8baa71c572dbb7e66fefc61ef6b" name="a1ecaa8baa71c572dbb7e66fefc61ef6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ecaa8baa71c572dbb7e66fefc61ef6b">&#9670;&#160;</a></span>inorder()</h2>
+<a id="ac58a342a6c017131baf42765f6fe6361" name="ac58a342a6c017131baf42765f6fe6361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58a342a6c017131baf42765f6fe6361">&#9670;&#160;</a></span>inorder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,7 +328,7 @@ template&lt;typename keyType, typename valueType&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt;::inorder </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -422,8 +422,8 @@ template&lt;typename keyType, typename valueType&gt; </div>
 
 </div>
 </div>
-<a id="abd39f41fd4ef9d587f2e9ba84fa3da90" name="abd39f41fd4ef9d587f2e9ba84fa3da90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd39f41fd4ef9d587f2e9ba84fa3da90">&#9670;&#160;</a></span>postorder()</h2>
+<a id="a9e754ed0139aaea16268b5debb8c17e2" name="a9e754ed0139aaea16268b5debb8c17e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e754ed0139aaea16268b5debb8c17e2">&#9670;&#160;</a></span>postorder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -436,7 +436,7 @@ template&lt;typename keyType, typename valueType&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt;::postorder </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -489,8 +489,8 @@ template&lt;typename keyType, typename valueType&gt; </div>
 
 </div>
 </div>
-<a id="a2b0514436414d5a9772dcdccede921ad" name="a2b0514436414d5a9772dcdccede921ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b0514436414d5a9772dcdccede921ad">&#9670;&#160;</a></span>preorder()</h2>
+<a id="a1f964115e4f37b0150c64b2bb73132ef" name="a1f964115e4f37b0150c64b2bb73132ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f964115e4f37b0150c64b2bb73132ef">&#9670;&#160;</a></span>preorder()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -503,7 +503,7 @@ template&lt;typename keyType, typename valueType&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt;::preorder </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -519,8 +519,8 @@ template&lt;typename keyType, typename valueType&gt; </div>
 
 </div>
 </div>
-<a id="a9eacd902c92d753ebd1a87e6e69cdd90" name="a9eacd902c92d753ebd1a87e6e69cdd90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eacd902c92d753ebd1a87e6e69cdd90">&#9670;&#160;</a></span>printk()</h2>
+<a id="a7281ceb79c0c60a6f94b7ee9648e988a" name="a7281ceb79c0c60a6f94b7ee9648e988a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7281ceb79c0c60a6f94b7ee9648e988a">&#9670;&#160;</a></span>printk()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -533,8 +533,12 @@ template&lt;typename keyType, typename valueType&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="class_r_b_tree.html">RBTree</a>&lt; keyType, valueType &gt;::printk </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>k</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span>&#160;)</td>
         </tr>
       </table>
   </td>
@@ -759,7 +763,7 @@ template&lt;typename keyType, typename valueType&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/jace/Documents/GitHub/CPP-Structs-Algorithms/<a class="el" href="datastructs_8h_source.html">datastructs.h</a></li>
+<li>/Users/jace/Documents/GitHub/CPP-Structs-Algorithms/<a class="el" href="datastructs_8hpp_source.html">datastructs.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -767,7 +771,7 @@ template&lt;typename keyType, typename valueType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_r_b_tree.html">RBTree</a></li>
-    <li class="footer">Generated on Sun Apr 13 2025 07:30:43 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Apr 26 2025 17:13:32 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

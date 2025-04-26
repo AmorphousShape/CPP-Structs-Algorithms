@@ -5,9 +5,8 @@ var searchData=
   ['addfront_2',['addFront',['../class_circular_dynamic_array.html#accf8bfc9bf52e5956483534275767c76',1,'CircularDynamicArray']]],
   ['addmatrix_3',['addMatrix',['../class_matrix_chain.html#ab4a395ea6ab3a182d4e654330ac00d9c',1,'MatrixChain']]],
   ['algorithms_20h_4',['algorithms.h',['..//Users/jace/Documents/GitHub/CPP-Structs-Algorithms/README.md#autotoc_md9',1,'']]],
-  ['algorithms_2eh_5',['algorithms.h',['../algorithms_8h.html',1,'']]],
-  ['apsp_6',['APSP',['../class_a_p_s_p.html',1,'APSP'],['../class_a_p_s_p.html#ac4c5f67835ef61d91b90773127cbb74d',1,'APSP::APSP()']]],
-  ['array_7',['Example 1: Circular Dynamic Array',['..//Users/jace/Documents/GitHub/CPP-Structs-Algorithms/README.md#autotoc_md13',1,'']]],
-  ['atpoint_8',['atPoint',['../class_circular_dynamic_array.html#aa3514c3bd3ead48871fba597b1ffe8c7',1,'CircularDynamicArray']]],
-  ['atref_9',['atRef',['../class_circular_dynamic_array.html#a2c4b6b60e6ab97b8d498c38fd91d2a22',1,'CircularDynamicArray']]]
+  ['apsp_5',['APSP',['../class_a_p_s_p.html',1,'APSP'],['../class_a_p_s_p.html#ac4c5f67835ef61d91b90773127cbb74d',1,'APSP::APSP()']]],
+  ['array_6',['Example 1: Circular Dynamic Array',['..//Users/jace/Documents/GitHub/CPP-Structs-Algorithms/README.md#autotoc_md13',1,'']]],
+  ['atpoint_7',['atPoint',['../class_circular_dynamic_array.html#aa3514c3bd3ead48871fba597b1ffe8c7',1,'CircularDynamicArray']]],
+  ['atref_8',['atRef',['../class_circular_dynamic_array.html#a2c4b6b60e6ab97b8d498c38fd91d2a22',1,'CircularDynamicArray']]]
 ];

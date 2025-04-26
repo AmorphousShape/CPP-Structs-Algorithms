@@ -113,7 +113,7 @@ $(function(){initNavTree('class_heap.html',''); initResizable(true); });
 <p>Implements a Minimum <a class="el" href="class_heap.html" title="Implements a Minimum Heap.">Heap</a>.  
  <a href="#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="datastructs_8h_source.html">datastructs.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="datastructs_8hpp_source.html">datastructs.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -129,16 +129,19 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Heap</b> ()</td></tr>
 <tr class="memdesc:a2e573a7c06f9c5ff24090bb851bfc2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a2e573a7c06f9c5ff24090bb851bfc2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e96a3c8247e4f35937b1a80433dd0c9" id="r_a9e96a3c8247e4f35937b1a80433dd0c9"><td class="memItemLeft" align="right" valign="top"><a id="a9e96a3c8247e4f35937b1a80433dd0c9" name="a9e96a3c8247e4f35937b1a80433dd0c9"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>size</b> ()</td></tr>
+<tr class="memdesc:a9e96a3c8247e4f35937b1a80433dd0c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the heap. <br /></td></tr>
+<tr class="separator:a9e96a3c8247e4f35937b1a80433dd0c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f2c1c5df7735ad0ce30f02cb428fee1" id="r_a7f2c1c5df7735ad0ce30f02cb428fee1"><td class="memItemLeft" align="right" valign="top">keyType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f2c1c5df7735ad0ce30f02cb428fee1">peekKey</a> ()</td></tr>
 <tr class="memdesc:a7f2c1c5df7735ad0ce30f02cb428fee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the minimum key in the heap.  <br /></td></tr>
 <tr class="separator:a7f2c1c5df7735ad0ce30f02cb428fee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a180b441cbe865325a0d0d898678a582a" id="r_a180b441cbe865325a0d0d898678a582a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a180b441cbe865325a0d0d898678a582a">insert</a> (keyType k)</td></tr>
 <tr class="memdesc:a180b441cbe865325a0d0d898678a582a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inserts a new node with key k.  <br /></td></tr>
 <tr class="separator:a180b441cbe865325a0d0d898678a582a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56ae92cbac366272d792f9e13fcd88ed" id="r_a56ae92cbac366272d792f9e13fcd88ed"><td class="memItemLeft" align="right" valign="top"><a id="a56ae92cbac366272d792f9e13fcd88ed" name="a56ae92cbac366272d792f9e13fcd88ed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printKey</b> ()</td></tr>
-<tr class="memdesc:a56ae92cbac366272d792f9e13fcd88ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all keys in the heap in level order. <br /></td></tr>
-<tr class="separator:a56ae92cbac366272d792f9e13fcd88ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87180eb7814638ac536a02af5d5443b7" id="r_a87180eb7814638ac536a02af5d5443b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87180eb7814638ac536a02af5d5443b7">printKeys</a> (ostream &amp;out=cout)</td></tr>
+<tr class="memdesc:a87180eb7814638ac536a02af5d5443b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all keys in the heap in level order.  <br /></td></tr>
+<tr class="separator:a87180eb7814638ac536a02af5d5443b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe7e4eceddf03d0f9d36bfaccc4a0e0e" id="r_abe7e4eceddf03d0f9d36bfaccc4a0e0e"><td class="memItemLeft" align="right" valign="top">keyType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe7e4eceddf03d0f9d36bfaccc4a0e0e">extractMin</a> ()</td></tr>
 <tr class="memdesc:abe7e4eceddf03d0f9d36bfaccc4a0e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes the minimum key from the heap and restores heap priority.  <br /></td></tr>
 <tr class="separator:abe7e4eceddf03d0f9d36bfaccc4a0e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,8 +254,43 @@ template&lt;typename keyType&gt; </div>
 
 </div>
 </div>
+<a id="a87180eb7814638ac536a02af5d5443b7" name="a87180eb7814638ac536a02af5d5443b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87180eb7814638ac536a02af5d5443b7">&#9670;&#160;</a></span>printKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename keyType&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_heap.html">Heap</a>&lt; keyType &gt;::printKeys </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span><span class="paramdefsep"> = </span><span class="paramdefval">cout</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints all keys in the heap in level order. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>The output stream to print to, defaulting to cout </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/jace/Documents/GitHub/CPP-Structs-Algorithms/<a class="el" href="datastructs_8h_source.html">datastructs.h</a></li>
+<li>/Users/jace/Documents/GitHub/CPP-Structs-Algorithms/<a class="el" href="datastructs_8hpp_source.html">datastructs.hpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -260,7 +298,7 @@ template&lt;typename keyType&gt; </div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_heap.html">Heap</a></li>
-    <li class="footer">Generated on Sun Apr 13 2025 07:30:43 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sat Apr 26 2025 17:13:32 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

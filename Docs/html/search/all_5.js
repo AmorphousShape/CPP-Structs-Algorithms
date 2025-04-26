@@ -8,6 +8,5 @@ var searchData=
   ['circulardynamicarray_3c_20keytype_20_3e_5',['CircularDynamicArray&lt; keyType &gt;',['../class_circular_dynamic_array.html',1,'']]],
   ['clear_6',['clear',['../class_matrix.html#ac0e2adb05e204d5a40cd129d9fb0593f',1,'Matrix::clear()'],['../class_circular_dynamic_array.html#abd99eb4fcaccd1bc47788c843424c26c',1,'CircularDynamicArray::clear()']]],
   ['col_7',['col',['../class_matrix.html#a5e60ddb033e335e643b128d96f8d35ec',1,'Matrix']]],
-  ['color_8',['color',['../datastructs_8h.html#a37dbdc30935031c05304482e1be89d8f',1,'datastructs.h']]],
-  ['contents_9',['Table of Contents',['..//Users/jace/Documents/GitHub/CPP-Structs-Algorithms/README.md#autotoc_md2',1,'']]]
+  ['contents_8',['Table of Contents',['..//Users/jace/Documents/GitHub/CPP-Structs-Algorithms/README.md#autotoc_md2',1,'']]]
 ];

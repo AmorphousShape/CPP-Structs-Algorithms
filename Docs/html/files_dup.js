@@ -1,5 +1,5 @@
 var files_dup =
 [
-    [ "algorithms.h", "algorithms_8h.html", "algorithms_8h" ],
-    [ "datastructs.h", "datastructs_8h.html", "datastructs_8h" ]
+    [ "algorithms.hpp", "algorithms_8hpp_source.html", null ],
+    [ "datastructs.hpp", "datastructs_8hpp_source.html", null ]
 ];
