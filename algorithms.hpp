@@ -755,12 +755,12 @@ class MatrixChain {
             if (i == 0) {
                 continue;
             }
-            if (m[i]->row != m[i-1]->col) {
+            if (m[i-1]->col != m[i]->row) {
                 throw runtime_error(
                     "Matrix dimensions do not match in MatrixChain constructor between matrices " + to_string(i-1) + " and " + to_string(i) + "\n" +
-                    "Row size " + to_string(m[i]->row) + " != Col size " + to_string(m[i-1]->col) + "\n"
+                    "Col size of matrix " + to_string(i-1) + " (" + to_string(m[i-1]->col) + 
+                    ") != Row size of matrix " + to_string(i) + " (" + to_string(m[i]->row) + ")\n"
                 );
-                return;
             }
         }
     }

@@ -43,7 +43,7 @@ int main() {
         try {
             MatrixChain mc({A, B});
         } catch (const runtime_error &e) {
-            assert(string(e.what()) == "Matrix dimensions do not match in MatrixChain constructor between matrices 0 and 1\nRow size 2 != Col size 4\n");
+            assert(e.what() == string("Matrix dimensions do not match in MatrixChain constructor between matrices 0 and 1\nCol size of matrix 0 (3) != Row size of matrix 1 (4)\n"));
         }
         delete A; delete B;
     }
