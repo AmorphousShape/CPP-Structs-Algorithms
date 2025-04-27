@@ -10,68 +10,40 @@ on:
 
 # Run an individual test for each data structure and each algorithm
 jobs:
-  apsp-test:
+  algorithms_test:
     runs-on: ubuntu-latest
+    env:
+      COMMON_FLAGS: "-I./include -L./lib -lm -std=c++23"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Build and Run APSP Test
         run: |
-          g++ -o apsp_tester tests/apsp_test.cpp -I./include -L./lib -lm
+          g++ -o apsp_tester tests/apsp_test.cpp $COMMON_FLAGS
           ./apsp_tester
-    
-  fib-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Build and Run Fibonacci Test
         run: |
-          g++ -o fib_tester tests/fib_test.cpp -I./include -L./lib -lm
+          g++ -o fib_tester tests/fib_test.cpp $COMMON_FLAGS
           ./fib_tester
-  
-  knapsack-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Build and Run Knapsack Test
         run: |
-          g++ -o knapsack_tester tests/knapsack_test.cpp -I./include -L./lib -lm
+          g++ -o knapsack_tester tests/knapsack_test.cpp $COMMON_FLAGS
           ./knapsack_tester
-
-  lcs-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Build and Run LCS Test
         run: |
-          g++ -o lcs_tester tests/lcs_test.cpp -I./include -L./lib -lm
+          g++ -o lcs_tester tests/lcs_test.cpp $COMMON_FLAGS
           ./lcs_tester
-    
-  matrix-chain-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Build and Run Matrix Chain Test
         run: |
-          g++ -o matrix_chain_tester tests/matrix_chain_test.cpp -I./include -L./lib -lm
+          g++ -o matrix_chain_tester tests/matrix_chain_test.cpp $COMMON_FLAGS
           ./matrix_chain_tester
-
-  world-series-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
 
       - name: Build and Run World Series Test
         run: |
-          g++ -o world_series_tester tests/world_series_test.cpp -I./include -L./lib -lm
+          g++ -o world_series_tester tests/world_series_test.cpp $COMMON_FLAGS
           ./world_series_tester

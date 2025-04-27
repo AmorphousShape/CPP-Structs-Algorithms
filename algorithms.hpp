@@ -589,7 +589,7 @@ class Matrix {
     /**
      * @brief Default constructor
      */
-    Matrix(vector< vector<int> > m): data(m) {};
+    Matrix(vector< vector<int> > m): row(m.at(0).size()), col(m.size()), data(m) {};
 
     /**
      * @brief Constructor with dimensions; initializes the matrix with 0s
