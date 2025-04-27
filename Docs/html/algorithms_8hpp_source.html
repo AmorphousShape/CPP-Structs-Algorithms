@@ -529,7 +529,7 @@ $(function(){initNavTree('algorithms_8hpp_source.html',''); initResizable(true);
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span></div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno"><a class="line" href="class_matrix.html#aa90b8ebee12016755ee78c7b52e4441d">  587</a></span>    vector&lt; vector&lt;int&gt; &gt; <a class="code hl_variable" href="class_matrix.html#aa90b8ebee12016755ee78c7b52e4441d">data</a>;</div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span></div>
-<div class="line"><a id="l00592" name="l00592"></a><span class="lineno"><a class="line" href="class_matrix.html#a58dcb547fcd1282b73f1191bf29aaa76">  592</a></span>    <a class="code hl_function" href="class_matrix.html#a58dcb547fcd1282b73f1191bf29aaa76">Matrix</a>(vector&lt; vector&lt;int&gt; &gt; m): <a class="code hl_variable" href="class_matrix.html#aa90b8ebee12016755ee78c7b52e4441d">data</a>(m) {};</div>
+<div class="line"><a id="l00592" name="l00592"></a><span class="lineno"><a class="line" href="class_matrix.html#a58dcb547fcd1282b73f1191bf29aaa76">  592</a></span>    <a class="code hl_function" href="class_matrix.html#a58dcb547fcd1282b73f1191bf29aaa76">Matrix</a>(vector&lt; vector&lt;int&gt; &gt; m): <a class="code hl_variable" href="class_matrix.html#a685f8e8daacc010c468d69d24d65f365">row</a>(m.at(0).size()), <a class="code hl_variable" href="class_matrix.html#a5e60ddb033e335e643b128d96f8d35ec">col</a>(m.size()), <a class="code hl_variable" href="class_matrix.html#aa90b8ebee12016755ee78c7b52e4441d">data</a>(m) {};</div>
 <div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span></div>
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno"><a class="line" href="class_matrix.html#a07a3cee5bc286ca27ceffe81ce5a2d01">  597</a></span>    <a class="code hl_function" href="class_matrix.html#a07a3cee5bc286ca27ceffe81ce5a2d01">Matrix</a>(<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> c) : <a class="code hl_variable" href="class_matrix.html#a685f8e8daacc010c468d69d24d65f365">row</a>(r), <a class="code hl_variable" href="class_matrix.html#a5e60ddb033e335e643b128d96f8d35ec">col</a>(c), <a class="code hl_variable" href="class_matrix.html#aa90b8ebee12016755ee78c7b52e4441d">data</a>(r, vector&lt;int&gt;(c, 0)) {}</div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span></div>
@@ -644,12 +644,12 @@ $(function(){initNavTree('algorithms_8hpp_source.html',''); initResizable(true);
 <div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>            <span class="keywordflow">if</span> (i == 0) {</div>
 <div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>                <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span>            }</div>
-<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>            <span class="keywordflow">if</span> (m[i]-&gt;row != m[i-1]-&gt;col) {</div>
+<div class="line"><a id="l00758" name="l00758"></a><span class="lineno">  758</span>            <span class="keywordflow">if</span> (m[i-1]-&gt;col != m[i]-&gt;row) {</div>
 <div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>                <span class="keywordflow">throw</span> runtime_error(</div>
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>                    <span class="stringliteral">&quot;Matrix dimensions do not match in MatrixChain constructor between matrices &quot;</span> + to_string(i-1) + <span class="stringliteral">&quot; and &quot;</span> + to_string(i) + <span class="stringliteral">&quot;\n&quot;</span> +</div>
-<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>                    <span class="stringliteral">&quot;Row size &quot;</span> + to_string(m[i]-&gt;row) + <span class="stringliteral">&quot; != Col size &quot;</span> + to_string(m[i-1]-&gt;col) + <span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>                );</div>
-<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>                    <span class="stringliteral">&quot;Col size of matrix &quot;</span> + to_string(i-1) + <span class="stringliteral">&quot; (&quot;</span> + to_string(m[i-1]-&gt;col) + </div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>                    <span class="stringliteral">&quot;) != Row size of matrix &quot;</span> + to_string(i) + <span class="stringliteral">&quot; (&quot;</span> + to_string(m[i]-&gt;row) + <span class="stringliteral">&quot;)\n&quot;</span></div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>                );</div>
 <div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>            }</div>
 <div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>        }</div>
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>    }</div>
@@ -748,7 +748,7 @@ $(function(){initNavTree('algorithms_8hpp_source.html',''); initResizable(true);
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>algorithms.hpp</b></li>
-    <li class="footer">Generated on Sat Apr 26 2025 17:17:25 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Sun Apr 27 2025 02:45:21 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>
