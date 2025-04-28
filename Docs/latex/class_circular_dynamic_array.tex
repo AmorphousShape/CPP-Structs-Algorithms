@@ -1,0 +1,284 @@
+\doxysection{Circular\+Dynamic\+Array\texorpdfstring{$<$}{<} elmtype \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_circular_dynamic_array}{}\label{class_circular_dynamic_array}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+
+
+Implements a circular dynamic array that can dynamically resize itself.  
+
+
+
+
+{\ttfamily \#include $<$datastructs.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_circular_dynamic_array_a79a960260d70be5e1e08b207a55e2350}{Circular\+Dynamic\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circular_dynamic_array_a242034a515f9b5a20ea8278765981df1}{Circular\+Dynamic\+Array}} (int \mbox{\hyperlink{class_circular_dynamic_array_a7f67ab01991daa6c0347225665da4838}{capacity}})
+\begin{DoxyCompactList}\small\item\em Constructor for a set capacity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circular_dynamic_array_aa70197ed37839eed7101c0197e55568e}{Circular\+Dynamic\+Array}} (\mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}} const \&src)
+\begin{DoxyCompactList}\small\item\em Copy constructor (deep copy) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_circular_dynamic_array_af25baafabec55e33170296ae1685a446}{\texorpdfstring{$\sim$}{\string~}\+Circular\+Dynamic\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_circular_dynamic_array_a8e78b28ba277933867296ab3a045815f}\label{class_circular_dynamic_array_a8e78b28ba277933867296ab3a045815f} 
+int {\bfseries length} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the array. \end{DoxyCompactList}\item 
+\Hypertarget{class_circular_dynamic_array_a7f67ab01991daa6c0347225665da4838}\label{class_circular_dynamic_array_a7f67ab01991daa6c0347225665da4838} 
+int {\bfseries capacity} ()
+\begin{DoxyCompactList}\small\item\em Returns the capacity of the array. \end{DoxyCompactList}\item 
+\Hypertarget{class_circular_dynamic_array_a2c4b6b60e6ab97b8d498c38fd91d2a22}\label{class_circular_dynamic_array_a2c4b6b60e6ab97b8d498c38fd91d2a22} 
+elmtype {\bfseries at\+Ref} (int i)
+\begin{DoxyCompactList}\small\item\em Returns the value of the element at index i. \end{DoxyCompactList}\item 
+\Hypertarget{class_circular_dynamic_array_aa3514c3bd3ead48871fba597b1ffe8c7}\label{class_circular_dynamic_array_aa3514c3bd3ead48871fba597b1ffe8c7} 
+elmtype \texorpdfstring{$\ast$}{*} {\bfseries at\+Point} (int i)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the element at index i. \end{DoxyCompactList}\item 
+\Hypertarget{class_circular_dynamic_array_a4e0b72a6fffc10572cfe018f44e631a0}\label{class_circular_dynamic_array_a4e0b72a6fffc10572cfe018f44e631a0} 
+elmtype \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int i)
+\begin{DoxyCompactList}\small\item\em Bracket operator. Returns burner element if index is invalid. \end{DoxyCompactList}\item 
+\Hypertarget{class_circular_dynamic_array_a191fd463160426b0a418e72fc34c684d}\label{class_circular_dynamic_array_a191fd463160426b0a418e72fc34c684d} 
+\mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}} \&R)
+\begin{DoxyCompactList}\small\item\em Equals operator. Deep copies all values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circular_dynamic_array_accf8bfc9bf52e5956483534275767c76}{add\+Front}} (elmtype v)
+\begin{DoxyCompactList}\small\item\em Adds an element to the front of the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circular_dynamic_array_ae59de58331704a210bd112aa968f5c8e}{add\+End}} (elmtype v)
+\begin{DoxyCompactList}\small\item\em Adds an element to the end of the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circular_dynamic_array_a9edf51aed7a5b8f5851ea7d8a3f5c958}{del\+Front}} ()
+\begin{DoxyCompactList}\small\item\em Removes the element at the front of the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circular_dynamic_array_a425fb94df506749e716a4cac1143fbd1}{del\+End}} ()
+\begin{DoxyCompactList}\small\item\em Removes the element at the end of the array. \end{DoxyCompactList}\item 
+\Hypertarget{class_circular_dynamic_array_abd99eb4fcaccd1bc47788c843424c26c}\label{class_circular_dynamic_array_abd99eb4fcaccd1bc47788c843424c26c} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clears all array data and resets the array to its default state. \end{DoxyCompactList}\item 
+\Hypertarget{class_circular_dynamic_array_a2f9355a5ca06053102e719dffd59899c}\label{class_circular_dynamic_array_a2f9355a5ca06053102e719dffd59899c} 
+void {\bfseries swap} (elmtype \texorpdfstring{$\ast$}{*}a, elmtype \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Swaps two elements. \end{DoxyCompactList}\item 
+elmtype \mbox{\hyperlink{class_circular_dynamic_array_a21babbcf83ea747525cb9c19edccf111}{Quick\+Select}} (int k)
+\begin{DoxyCompactList}\small\item\em Returns the Kth smallest element of the array using the median as the partition element. \end{DoxyCompactList}\item 
+elmtype \mbox{\hyperlink{class_circular_dynamic_array_ad14024c9e4e72bdeaace057dafc3b16c}{WCSelect}} (int k)
+\begin{DoxyCompactList}\small\item\em Returns the Kth smallest element of the array using the median of medians (subarray size = 5) as the partition element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_circular_dynamic_array_a82e86e252e75393caf3b24a786defd44}{stable\+Sort}} ()
+\begin{DoxyCompactList}\small\item\em Performs a mergesort on the array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_circular_dynamic_array_ad49cca26dc5bd6cdeb6be9a6e2903fe6}{linear\+Search}} (elmtype e)
+\begin{DoxyCompactList}\small\item\em Performs a linear search for element e. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_circular_dynamic_array_a6125658833f1eb20c38bf3f59ee76224}{bin\+Search}} (elmtype e)
+\begin{DoxyCompactList}\small\item\em Performs a binary search for element e. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename elmtype$>$\newline
+class Circular\+Dynamic\+Array$<$ elmtype $>$}
+Implements a circular dynamic array that can dynamically resize itself. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em elmtype} & The type of element stored in the circular dynamic array \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_circular_dynamic_array_a79a960260d70be5e1e08b207a55e2350}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!CircularDynamicArray@{CircularDynamicArray}}
+\index{CircularDynamicArray@{CircularDynamicArray}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{CircularDynamicArray()}{CircularDynamicArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_a79a960260d70be5e1e08b207a55e2350} 
+template$<$typename elmtype$>$ \\
+\mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\mbox{\hyperlink{class_circular_dynamic_array}{\+::\+Circular\+Dynamic\+Array}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor. 
+
+Initializes the circular dynamic array with a capacity of 2. End is set to -\/1 for \doxylink{class_circular_dynamic_array_ae59de58331704a210bd112aa968f5c8e}{add\+End()} and \doxylink{class_circular_dynamic_array_accf8bfc9bf52e5956483534275767c76}{add\+Front()} functionality. \Hypertarget{class_circular_dynamic_array_a242034a515f9b5a20ea8278765981df1}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!CircularDynamicArray@{CircularDynamicArray}}
+\index{CircularDynamicArray@{CircularDynamicArray}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{CircularDynamicArray()}{CircularDynamicArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_a242034a515f9b5a20ea8278765981df1} 
+template$<$typename elmtype$>$ \\
+\mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\mbox{\hyperlink{class_circular_dynamic_array}{\+::\+Circular\+Dynamic\+Array}} (\begin{DoxyParamCaption}\item[{int}]{capacity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for a set capacity. 
+
+Initializes the circular dynamic array with a set capacity. End is set to capacity -\/ 1 for \doxylink{class_circular_dynamic_array_ae59de58331704a210bd112aa968f5c8e}{add\+End()} and \doxylink{class_circular_dynamic_array_accf8bfc9bf52e5956483534275767c76}{add\+Front()} functionality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em capacity} & The capacity of the circular dynamic array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_circular_dynamic_array_aa70197ed37839eed7101c0197e55568e}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!CircularDynamicArray@{CircularDynamicArray}}
+\index{CircularDynamicArray@{CircularDynamicArray}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{CircularDynamicArray()}{CircularDynamicArray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_aa70197ed37839eed7101c0197e55568e} 
+template$<$typename elmtype$>$ \\
+\mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\mbox{\hyperlink{class_circular_dynamic_array}{\+::\+Circular\+Dynamic\+Array}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$ const \&}]{src}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor (deep copy) 
+
+Deep copies all values from the source circular dynamic array
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The source circular dynamic array to copy \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_circular_dynamic_array_af25baafabec55e33170296ae1685a446}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!````~CircularDynamicArray@{\texorpdfstring{$\sim$}{\string~}CircularDynamicArray}}
+\index{````~CircularDynamicArray@{\texorpdfstring{$\sim$}{\string~}CircularDynamicArray}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CircularDynamicArray()}{\string~CircularDynamicArray()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_af25baafabec55e33170296ae1685a446} 
+template$<$typename elmtype$>$ \\
+\mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+Deletes the array data 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_circular_dynamic_array_ae59de58331704a210bd112aa968f5c8e}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!addEnd@{addEnd}}
+\index{addEnd@{addEnd}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{addEnd()}{addEnd()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_ae59de58331704a210bd112aa968f5c8e} 
+template$<$typename elmtype$>$ \\
+void \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::add\+End (\begin{DoxyParamCaption}\item[{elmtype}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an element to the end of the array. 
+
+Time complexity\+: O(1) (Amortized) \Hypertarget{class_circular_dynamic_array_accf8bfc9bf52e5956483534275767c76}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!addFront@{addFront}}
+\index{addFront@{addFront}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{addFront()}{addFront()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_accf8bfc9bf52e5956483534275767c76} 
+template$<$typename elmtype$>$ \\
+void \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::add\+Front (\begin{DoxyParamCaption}\item[{elmtype}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an element to the front of the array. 
+
+Time complexity\+: O(1) (Amortized) \Hypertarget{class_circular_dynamic_array_a6125658833f1eb20c38bf3f59ee76224}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!binSearch@{binSearch}}
+\index{binSearch@{binSearch}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{binSearch()}{binSearch()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_a6125658833f1eb20c38bf3f59ee76224} 
+template$<$typename elmtype$>$ \\
+int \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::bin\+Search (\begin{DoxyParamCaption}\item[{elmtype}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs a binary search for element e. 
+
+Time complexity\+: O(lg(size))
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The element to search for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the element if found, -\/1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_circular_dynamic_array_a425fb94df506749e716a4cac1143fbd1}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!delEnd@{delEnd}}
+\index{delEnd@{delEnd}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{delEnd()}{delEnd()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_a425fb94df506749e716a4cac1143fbd1} 
+template$<$typename elmtype$>$ \\
+void \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::del\+End (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the element at the end of the array. 
+
+Time complexity\+: O(1) (Amortized) \Hypertarget{class_circular_dynamic_array_a9edf51aed7a5b8f5851ea7d8a3f5c958}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!delFront@{delFront}}
+\index{delFront@{delFront}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{delFront()}{delFront()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_a9edf51aed7a5b8f5851ea7d8a3f5c958} 
+template$<$typename elmtype$>$ \\
+void \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::del\+Front (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the element at the front of the array. 
+
+Time complexity\+: O(1) (Amortized) \Hypertarget{class_circular_dynamic_array_ad49cca26dc5bd6cdeb6be9a6e2903fe6}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!linearSearch@{linearSearch}}
+\index{linearSearch@{linearSearch}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{linearSearch()}{linearSearch()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_ad49cca26dc5bd6cdeb6be9a6e2903fe6} 
+template$<$typename elmtype$>$ \\
+int \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::linear\+Search (\begin{DoxyParamCaption}\item[{elmtype}]{e}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs a linear search for element e. 
+
+Time complexity\+: O(size)
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The element to search for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The index of the element if found, -\/1 otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_circular_dynamic_array_a21babbcf83ea747525cb9c19edccf111}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!QuickSelect@{QuickSelect}}
+\index{QuickSelect@{QuickSelect}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{QuickSelect()}{QuickSelect()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_a21babbcf83ea747525cb9c19edccf111} 
+template$<$typename elmtype$>$ \\
+elmtype \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::\+Quick\+Select (\begin{DoxyParamCaption}\item[{int}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Kth smallest element of the array using the median as the partition element. 
+
+Time complexity\+: O(size)
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The index of the element to find\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Kth smallest element of the array 
+\end{DoxyReturn}
+\Hypertarget{class_circular_dynamic_array_a82e86e252e75393caf3b24a786defd44}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!stableSort@{stableSort}}
+\index{stableSort@{stableSort}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{stableSort()}{stableSort()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_a82e86e252e75393caf3b24a786defd44} 
+template$<$typename elmtype$>$ \\
+void \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::stable\+Sort (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs a mergesort on the array. 
+
+Time complexity\+: O(size \texorpdfstring{$\ast$}{*} lg(size)) \Hypertarget{class_circular_dynamic_array_ad14024c9e4e72bdeaace057dafc3b16c}\index{CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}!WCSelect@{WCSelect}}
+\index{WCSelect@{WCSelect}!CircularDynamicArray$<$ elmtype $>$@{CircularDynamicArray$<$ elmtype $>$}}
+\doxysubsubsection{\texorpdfstring{WCSelect()}{WCSelect()}}
+{\footnotesize\ttfamily \label{class_circular_dynamic_array_ad14024c9e4e72bdeaace057dafc3b16c} 
+template$<$typename elmtype$>$ \\
+elmtype \mbox{\hyperlink{class_circular_dynamic_array}{Circular\+Dynamic\+Array}}$<$ elmtype $>$\+::\+WCSelect (\begin{DoxyParamCaption}\item[{int}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Kth smallest element of the array using the median of medians (subarray size = 5) as the partition element. 
+
+Time complexity\+: O(size)
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The index of the element to find\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Kth smallest element of the array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/jace/\+Documents/\+Git\+Hub/\+CPP-\/\+Structs-\/\+Algorithms/datastructs.\+hpp\end{DoxyCompactItemize}

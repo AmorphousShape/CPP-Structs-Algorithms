@@ -1,0 +1,59 @@
+\doxysection{Knapsack Class Reference}
+\hypertarget{class_knapsack}{}\label{class_knapsack}\index{Knapsack@{Knapsack}}
+
+
+Stores information for and solves the 0-\/1 knapsack problem using dynamic programming.  
+
+
+
+
+{\ttfamily \#include $<$algorithms.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_knapsack_adb53a12c0b54bbbb440846bbf1a9a22c}{Knapsack}} (int n, int max, int \texorpdfstring{$\ast$}{*}p, int \texorpdfstring{$\ast$}{*}w)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_knapsack_a659110ad3da0da21a4b6620f6943c877}\label{class_knapsack_a659110ad3da0da21a4b6620f6943c877} 
+void {\bfseries print\+Table} ()
+\begin{DoxyCompactList}\small\item\em Print the dynamic programming table for the knapsack problem. \end{DoxyCompactList}\item 
+\Hypertarget{class_knapsack_adc8de1bc33b4b12a4bf4b1b22131ad06}\label{class_knapsack_adc8de1bc33b4b12a4bf4b1b22131ad06} 
+void {\bfseries print\+PWO} (std\+::ostream \&out=std\+::cout)
+\begin{DoxyCompactList}\small\item\em Print the profits, weights, and objects chosen for the knapsack problem. \end{DoxyCompactList}\item 
+\Hypertarget{class_knapsack_a4894eaf4cb5f28c741744120a55ae15d}\label{class_knapsack_a4894eaf4cb5f28c741744120a55ae15d} 
+int {\bfseries get\+Profit} ()
+\begin{DoxyCompactList}\small\item\em Get the maximum profit of the knapsack problem. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores information for and solves the 0-\/1 knapsack problem using dynamic programming. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_knapsack_adb53a12c0b54bbbb440846bbf1a9a22c}\index{Knapsack@{Knapsack}!Knapsack@{Knapsack}}
+\index{Knapsack@{Knapsack}!Knapsack@{Knapsack}}
+\doxysubsubsection{\texorpdfstring{Knapsack()}{Knapsack()}}
+{\footnotesize\ttfamily \label{class_knapsack_adb53a12c0b54bbbb440846bbf1a9a22c} 
+Knapsack\+::\+Knapsack (\begin{DoxyParamCaption}\item[{int}]{n}{, }\item[{int}]{max}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{w}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+NOTE\+: p and w MUST be 1-\/indexed
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of items in the knapsack \\
+\hline
+{\em max} & Maximum weight of the knapsack \\
+\hline
+{\em p} & Array of profits for each item (1-\/indexed) \\
+\hline
+{\em w} & Array of weights for each item (1-\/indexed) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/jace/\+Documents/\+Git\+Hub/\+CPP-\/\+Structs-\/\+Algorithms/algorithms.\+hpp\end{DoxyCompactItemize}

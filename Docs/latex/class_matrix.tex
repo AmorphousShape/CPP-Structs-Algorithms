@@ -1,0 +1,66 @@
+\doxysection{Matrix Class Reference}
+\hypertarget{class_matrix}{}\label{class_matrix}\index{Matrix@{Matrix}}
+
+
+Represents a matrix.  
+
+
+
+
+{\ttfamily \#include $<$algorithms.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matrix_a70a5d03d39ed00b8a9d7e6d501bb2bc7}\label{class_matrix_a70a5d03d39ed00b8a9d7e6d501bb2bc7} 
+{\bfseries Matrix} (std\+::vector$<$ std\+::vector$<$ int $>$ $>$ m)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a07a3cee5bc286ca27ceffe81ce5a2d01}\label{class_matrix_a07a3cee5bc286ca27ceffe81ce5a2d01} 
+{\bfseries Matrix} (int r, int c)
+\begin{DoxyCompactList}\small\item\em Constructor with dimensions; initializes the matrix with 0s. \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a37285ebf9e6f823ac0e54d01b9f3822f}\label{class_matrix_a37285ebf9e6f823ac0e54d01b9f3822f} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_matrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Equality operator for matrices. \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_ac0e2adb05e204d5a40cd129d9fb0593f}\label{class_matrix_ac0e2adb05e204d5a40cd129d9fb0593f} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Clears the matrix data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_matrix_a1b80332efd745127fb322c91eecce02a}{print}} (std\+::ostream \&out=std\+::cout)
+\begin{DoxyCompactList}\small\item\em Prints the matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matrix_a685f8e8daacc010c468d69d24d65f365}\label{class_matrix_a685f8e8daacc010c468d69d24d65f365} 
+int {\bfseries row}
+\begin{DoxyCompactList}\small\item\em Number of rows in the matrix. \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_a5e60ddb033e335e643b128d96f8d35ec}\label{class_matrix_a5e60ddb033e335e643b128d96f8d35ec} 
+int {\bfseries col}
+\begin{DoxyCompactList}\small\item\em Number of columns in the matrix. \end{DoxyCompactList}\item 
+\Hypertarget{class_matrix_ae0c083b19f34a4680d72371d77c1b37d}\label{class_matrix_ae0c083b19f34a4680d72371d77c1b37d} 
+std\+::vector$<$ std\+::vector$<$ int $>$ $>$ {\bfseries data}
+\begin{DoxyCompactList}\small\item\em Data of the matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a matrix. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_matrix_a1b80332efd745127fb322c91eecce02a}\index{Matrix@{Matrix}!print@{print}}
+\index{print@{print}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_matrix_a1b80332efd745127fb322c91eecce02a} 
+void Matrix\+::print (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out}{ = {\ttfamily std\+:\+:cout}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream to print to (default is std\+::cout) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/jace/\+Documents/\+Git\+Hub/\+CPP-\/\+Structs-\/\+Algorithms/algorithms.\+hpp\end{DoxyCompactItemize}

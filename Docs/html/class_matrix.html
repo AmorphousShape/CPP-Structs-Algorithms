@@ -118,10 +118,10 @@ $(function(){initNavTree('class_matrix.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a58dcb547fcd1282b73f1191bf29aaa76" id="r_a58dcb547fcd1282b73f1191bf29aaa76"><td class="memItemLeft" align="right" valign="top"><a id="a58dcb547fcd1282b73f1191bf29aaa76" name="a58dcb547fcd1282b73f1191bf29aaa76"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix</b> (vector&lt; vector&lt; int &gt; &gt; m)</td></tr>
-<tr class="memdesc:a58dcb547fcd1282b73f1191bf29aaa76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
-<tr class="separator:a58dcb547fcd1282b73f1191bf29aaa76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a5d03d39ed00b8a9d7e6d501bb2bc7" id="r_a70a5d03d39ed00b8a9d7e6d501bb2bc7"><td class="memItemLeft" align="right" valign="top"><a id="a70a5d03d39ed00b8a9d7e6d501bb2bc7" name="a70a5d03d39ed00b8a9d7e6d501bb2bc7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Matrix</b> (std::vector&lt; std::vector&lt; int &gt; &gt; m)</td></tr>
+<tr class="memdesc:a70a5d03d39ed00b8a9d7e6d501bb2bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="separator:a70a5d03d39ed00b8a9d7e6d501bb2bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07a3cee5bc286ca27ceffe81ce5a2d01" id="r_a07a3cee5bc286ca27ceffe81ce5a2d01"><td class="memItemLeft" align="right" valign="top"><a id="a07a3cee5bc286ca27ceffe81ce5a2d01" name="a07a3cee5bc286ca27ceffe81ce5a2d01"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Matrix</b> (int r, int c)</td></tr>
 <tr class="memdesc:a07a3cee5bc286ca27ceffe81ce5a2d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with dimensions; initializes the matrix with 0s. <br /></td></tr>
@@ -134,9 +134,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
 <tr class="memdesc:ac0e2adb05e204d5a40cd129d9fb0593f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the matrix data. <br /></td></tr>
 <tr class="separator:ac0e2adb05e204d5a40cd129d9fb0593f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdb3a012c0cdf65f83c4d28e3f55f98d" id="r_acdb3a012c0cdf65f83c4d28e3f55f98d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acdb3a012c0cdf65f83c4d28e3f55f98d">print</a> (ostream &amp;out=cout)</td></tr>
-<tr class="memdesc:acdb3a012c0cdf65f83c4d28e3f55f98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the matrix.  <br /></td></tr>
-<tr class="separator:acdb3a012c0cdf65f83c4d28e3f55f98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b80332efd745127fb322c91eecce02a" id="r_a1b80332efd745127fb322c91eecce02a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b80332efd745127fb322c91eecce02a">print</a> (std::ostream &amp;out=std::cout)</td></tr>
+<tr class="memdesc:a1b80332efd745127fb322c91eecce02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the matrix.  <br /></td></tr>
+<tr class="separator:a1b80332efd745127fb322c91eecce02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -148,16 +148,16 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>row</b></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>col</b></td></tr>
 <tr class="memdesc:a5e60ddb033e335e643b128d96f8d35ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of columns in the matrix. <br /></td></tr>
 <tr class="separator:a5e60ddb033e335e643b128d96f8d35ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa90b8ebee12016755ee78c7b52e4441d" id="r_aa90b8ebee12016755ee78c7b52e4441d"><td class="memItemLeft" align="right" valign="top"><a id="aa90b8ebee12016755ee78c7b52e4441d" name="aa90b8ebee12016755ee78c7b52e4441d"></a>
-vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
-<tr class="memdesc:aa90b8ebee12016755ee78c7b52e4441d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data of the matrix. <br /></td></tr>
-<tr class="separator:aa90b8ebee12016755ee78c7b52e4441d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c083b19f34a4680d72371d77c1b37d" id="r_ae0c083b19f34a4680d72371d77c1b37d"><td class="memItemLeft" align="right" valign="top"><a id="ae0c083b19f34a4680d72371d77c1b37d" name="ae0c083b19f34a4680d72371d77c1b37d"></a>
+std::vector&lt; std::vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="memdesc:ae0c083b19f34a4680d72371d77c1b37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data of the matrix. <br /></td></tr>
+<tr class="separator:ae0c083b19f34a4680d72371d77c1b37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a matrix. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="acdb3a012c0cdf65f83c4d28e3f55f98d" name="acdb3a012c0cdf65f83c4d28e3f55f98d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdb3a012c0cdf65f83c4d28e3f55f98d">&#9670;&#160;</a></span>print()</h2>
+<a id="a1b80332efd745127fb322c91eecce02a" name="a1b80332efd745127fb322c91eecce02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b80332efd745127fb322c91eecce02a">&#9670;&#160;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -168,7 +168,7 @@ vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="b
         <tr>
           <td class="memname">void Matrix::print </td>
           <td>(</td>
-          <td class="paramtype">ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span><span class="paramdefsep"> = </span><span class="paramdefval">cout</span></td><td>)</td>
+          <td class="paramtype">std::ostream &amp;</td>          <td class="paramname"><span class="paramname"><em>out</em></span><span class="paramdefsep"> = </span><span class="paramdefval">std::cout</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -182,7 +182,7 @@ vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 <p>Prints the matrix. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">out</td><td>Output stream to print to (default is cout) </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream to print to (default is std::cout) </td></tr>
   </table>
   </dd>
 </dl>
@@ -198,7 +198,7 @@ vector&lt; vector&lt; int &gt; &gt;&#160;</td><td class="memItemRight" valign="b
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_matrix.html">Matrix</a></li>
-    <li class="footer">Generated on Sun Apr 27 2025 02:45:21 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+    <li class="footer">Generated on Mon Apr 28 2025 04:03:35 for CPP-Structs-Algorithms by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>
 </body>

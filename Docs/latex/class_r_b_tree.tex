@@ -1,0 +1,362 @@
+\doxysection{RBTree\texorpdfstring{$<$}{<} key\+Type, value\+Type \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_r_b_tree}{}\label{class_r_b_tree}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+
+
+Implements a Red-\/\+Black Tree.  
+
+
+
+
+{\ttfamily \#include $<$datastructs.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_r_b_tree_a0626b6bbc90feb0f2cb5923b3ba71381}\label{class_r_b_tree_a0626b6bbc90feb0f2cb5923b3ba71381} 
+{\bfseries RBTree} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_b_tree_ad1c5eeaf33f1e6ed0ddf3d196ac38bad}{RBTree}} (key\+Type k, value\+Type v)
+\begin{DoxyCompactList}\small\item\em Constructs a tree with a single node with key k and value v. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_b_tree_a3de58f2af6995d12cad5bcf94699e3d6}{RBTree}} (key\+Type \texorpdfstring{$\ast$}{*}k, value\+Type \texorpdfstring{$\ast$}{*}v, int s)
+\begin{DoxyCompactList}\small\item\em Constructs a tree with arrays k and v as the insert values and size = s. \end{DoxyCompactList}\item 
+\Hypertarget{class_r_b_tree_a60b508e8251a3d96dde94e88a40980a1}\label{class_r_b_tree_a60b508e8251a3d96dde94e88a40980a1} 
+{\bfseries RBTree} (const \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$ \&src)
+\begin{DoxyCompactList}\small\item\em Copy constructor (deep copy) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_b_tree_a766b03d225fe977fd52ffcf24998bbf2}{\texorpdfstring{$\sim$}{\string~}\+RBTree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$ \& \mbox{\hyperlink{class_r_b_tree_a0e10deb59bf471f7ad82c153cd950e0e}{operator=}} (const \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$ \&R)
+\begin{DoxyCompactList}\small\item\em Copy equals operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_b_tree_aef9bdaa19eb20f956c5e4494a0b32b77}{preorder}} (std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the preorder traversal of the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_b_tree_a9c6bc79428703d283366c70c19ad166b}{inorder}} (std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the inorder traversal of the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_b_tree_a66fd81ad9dcc8b45e61615135a931de3}{postorder}} (std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the postorder traversal of the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_b_tree_ac55bdc94a8aff6220b7e418690a71d13}{printk}} (int k, std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the K smallest elements of the tree. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_b_tree_a641fbb2ef33d68c965204e19c9ea1b86}{size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the tree. \end{DoxyCompactList}\item 
+value\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_r_b_tree_a34631a7f9e8f543e9a054f82f4b62a83}{search}} (key\+Type k)
+\begin{DoxyCompactList}\small\item\em Searches the tree for key k and returns a pointer to the node\textquotesingle{}s value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_r_b_tree_affb4cecf25b152dc8b18f694f81a57ef}{insert}} (key\+Type k, value\+Type v)
+\begin{DoxyCompactList}\small\item\em Inserts a new node with key k and value v into the tree. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_b_tree_a001264a0bb5dca50c66bb7efbca888f1}{remove}} (key\+Type k)
+\begin{DoxyCompactList}\small\item\em Removes the node with key k from the tree. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_r_b_tree_ae23fc8853cfae6b260ae69a79429d3e7}{rank}} (key\+Type k)
+\begin{DoxyCompactList}\small\item\em Returns the rank of the node with key k. \end{DoxyCompactList}\item 
+key\+Type \mbox{\hyperlink{class_r_b_tree_a09d7087fc666f97b1f3f4f66192ced6c}{select}} (int k)
+\begin{DoxyCompactList}\small\item\em Returns the Kth smallest element in the tree. \end{DoxyCompactList}\item 
+key\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_r_b_tree_ae2a0372b080a5307311f79751deafc87}{successor}} (key\+Type k)
+\begin{DoxyCompactList}\small\item\em Finds the successor of the node with key k and returns a pointer to its key. \end{DoxyCompactList}\item 
+key\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_r_b_tree_a5fc14632bf7705dc544ff6a473f80d07}{predecessor}} (key\+Type k)
+\begin{DoxyCompactList}\small\item\em Finds the predecessor of the node with key k and returns a pointer to its key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename key\+Type, typename value\+Type$>$\newline
+class RBTree$<$ key\+Type, value\+Type $>$}
+Implements a Red-\/\+Black Tree. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em key\+Type} & The type of key stored in the tree \\
+\hline
+{\em value\+Type} & The type of value stored in the tree\\
+\hline
+\end{DoxyTemplParams}
+This class implements a Red-\/\+Black Tree, a self-\/balancing binary search tree. It maintains balance using rotations and recoloring during insertions and deletions, ensuring efficient operations with a time complexity of O(log n).
+
+The tree has the following properties\+:
+\begin{DoxyItemize}
+\item Each node has a color (Red or Black).
+\item The root node is always Black.
+\item Red nodes cannot have Red children (no two consecutive Red nodes).
+\item Every path from a node to its descendant nil nodes has the same number of Black nodes (Black height).
+\item The nil node (a sentinel node representing the end of the tree) is always Black.
+\end{DoxyItemize}
+
+These properties ensure that the tree remains approximately balanced, making it suitable for applications requiring fast lookups, insertions, and deletions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_r_b_tree_ad1c5eeaf33f1e6ed0ddf3d196ac38bad}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!RBTree@{RBTree}}
+\index{RBTree@{RBTree}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{RBTree()}{RBTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_r_b_tree_ad1c5eeaf33f1e6ed0ddf3d196ac38bad} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+\mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\mbox{\hyperlink{class_r_b_tree}{\+::\+RBTree}} (\begin{DoxyParamCaption}\item[{key\+Type}]{k}{, }\item[{value\+Type}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a tree with a single node with key k and value v. 
+
+This constructor initializes the tree with a single node with the given key and value. The nil node is created, and the root is set to the new node. The color of the root is set to Black. Time complexity\+: O(1)
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key of the root node \\
+\hline
+{\em v} & The value of the root node \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_r_b_tree_a3de58f2af6995d12cad5bcf94699e3d6}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!RBTree@{RBTree}}
+\index{RBTree@{RBTree}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{RBTree()}{RBTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a3de58f2af6995d12cad5bcf94699e3d6} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+\mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\mbox{\hyperlink{class_r_b_tree}{\+::\+RBTree}} (\begin{DoxyParamCaption}\item[{key\+Type \texorpdfstring{$\ast$}{*}}]{k}{, }\item[{value\+Type \texorpdfstring{$\ast$}{*}}]{v}{, }\item[{int}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a tree with arrays k and v as the insert values and size = s. 
+
+This constructor initializes the tree with the given arrays of keys and values. It creates a nil node and inserts each key-\/value pair into the tree. The root is set to nil initially. Time complexity\+: O(s)
+
+\begin{DoxyNote}{Note}
+If s is larger than the size of either array, this will cause a segmentation fault. Any s smaller than the size of either array will work up to the specified index, but the rest of the array will be ignored.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The array of keys to insert \\
+\hline
+{\em v} & The array of values to insert \\
+\hline
+{\em s} & The size of the arrays \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_r_b_tree_a766b03d225fe977fd52ffcf24998bbf2}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!````~RBTree@{\texorpdfstring{$\sim$}{\string~}RBTree}}
+\index{````~RBTree@{\texorpdfstring{$\sim$}{\string~}RBTree}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}RBTree()}{\string~RBTree()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a766b03d225fe977fd52ffcf24998bbf2} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+\mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{class_r_b_tree}{RBTree}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor. 
+
+This destructor deletes the tree by calling the cascade function on the root node. The cascade function recursively deletes all nodes in the tree. Time complexity\+: O(size) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_r_b_tree_a9c6bc79428703d283366c70c19ad166b}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!inorder@{inorder}}
+\index{inorder@{inorder}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{inorder()}{inorder()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a9c6bc79428703d283366c70c19ad166b} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+void \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::inorder (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the inorder traversal of the tree. 
+
+This function prints the inorder traversal of the tree. It calls the root\textquotesingle{}s inorder function, which prints the nodes in inorder. Time complexity\+: O(n) \Hypertarget{class_r_b_tree_affb4cecf25b152dc8b18f694f81a57ef}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!insert@{insert}}
+\index{insert@{insert}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_affb4cecf25b152dc8b18f694f81a57ef} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+void \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::insert (\begin{DoxyParamCaption}\item[{key\+Type}]{k}{, }\item[{value\+Type}]{v}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a new node with key k and value v into the tree. 
+
+This function inserts a new node with key k and value v into the tree. It first creates a new node and sets its size to 1. Then, it traverses the tree to find the correct position for the new node. Finally, it calls the insert\+Fix\+Tree function to restore the Red-\/\+Black Tree properties. Time complexity\+: O(lg(size))
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key of the new node \\
+\hline
+{\em v} & The value of the new node \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_r_b_tree_a0e10deb59bf471f7ad82c153cd950e0e}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a0e10deb59bf471f7ad82c153cd950e0e} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+\mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$ \& \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$ \&}]{R}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy equals operator. 
+
+This operator assigns the values of the source tree to the current tree. It first deletes the current tree and then copies the values from the source tree. Time complexity\+: O(n), n = R.\+root-\/\texorpdfstring{$>$}{>}size
+
+
+\begin{DoxyParams}{Parameters}
+{\em R} & The source tree to copy from\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the current tree 
+\end{DoxyReturn}
+\Hypertarget{class_r_b_tree_a66fd81ad9dcc8b45e61615135a931de3}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!postorder@{postorder}}
+\index{postorder@{postorder}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{postorder()}{postorder()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a66fd81ad9dcc8b45e61615135a931de3} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+void \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::postorder (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the postorder traversal of the tree. 
+
+This function prints the postorder traversal of the tree. It calls the root\textquotesingle{}s postorder function, which prints the nodes in postorder. Time complexity\+: O(n) \Hypertarget{class_r_b_tree_a5fc14632bf7705dc544ff6a473f80d07}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!predecessor@{predecessor}}
+\index{predecessor@{predecessor}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{predecessor()}{predecessor()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a5fc14632bf7705dc544ff6a473f80d07} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+key\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::predecessor (\begin{DoxyParamCaption}\item[{key\+Type}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the predecessor of the node with key k and returns a pointer to its key. 
+
+This function finds the predecessor of the node with key k. The predecessor is the largest node in the left subtree. If the left child is null, it returns nullptr. Time complexity\+: O(lg(size))
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key of the node whose predecessor is to be found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the key of the predecessor node, or nullptr if there is no predecessor 
+\end{DoxyReturn}
+\Hypertarget{class_r_b_tree_aef9bdaa19eb20f956c5e4494a0b32b77}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!preorder@{preorder}}
+\index{preorder@{preorder}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{preorder()}{preorder()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_aef9bdaa19eb20f956c5e4494a0b32b77} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+void \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::preorder (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the preorder traversal of the tree. 
+
+This function prints the preorder traversal of the tree. It calls the root\textquotesingle{}s preorder function, which prints the nodes in preorder. Time complexity\+: O(n) \Hypertarget{class_r_b_tree_ac55bdc94a8aff6220b7e418690a71d13}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!printk@{printk}}
+\index{printk@{printk}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{printk()}{printk()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_ac55bdc94a8aff6220b7e418690a71d13} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+void \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::printk (\begin{DoxyParamCaption}\item[{int}]{k}{, }\item[{std\+::ostream \&}]{out}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the K smallest elements of the tree. 
+
+This function prints the K smallest elements of the tree. It calls the root\textquotesingle{}s printk function, which prints the K smallest elements in preorder traversal. Time complexity\+: O(k + lg(size)) \Hypertarget{class_r_b_tree_ae23fc8853cfae6b260ae69a79429d3e7}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!rank@{rank}}
+\index{rank@{rank}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{rank()}{rank()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_ae23fc8853cfae6b260ae69a79429d3e7} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+int \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::rank (\begin{DoxyParamCaption}\item[{key\+Type}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the rank of the node with key k. 
+
+This function returns the rank of the node with key k. The rank is the number of nodes with keys less than k. If the key is not found, it returns 0. Time complexity\+: O(lg(root-\/\texorpdfstring{$>$}{>}size)) \Hypertarget{class_r_b_tree_a001264a0bb5dca50c66bb7efbca888f1}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!remove@{remove}}
+\index{remove@{remove}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a001264a0bb5dca50c66bb7efbca888f1} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+int \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::remove (\begin{DoxyParamCaption}\item[{key\+Type}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the node with key k from the tree. 
+
+This function removes the node with key k from the tree. It first searches for the node with key k. If the node is found, it removes it and restores the Red-\/\+Black Tree properties. Time complexity\+: O(lg(size))
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key of the node to be removed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the node was removed, 0 if the node was not found. 
+\end{DoxyReturn}
+\Hypertarget{class_r_b_tree_a34631a7f9e8f543e9a054f82f4b62a83}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!search@{search}}
+\index{search@{search}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a34631a7f9e8f543e9a054f82f4b62a83} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+value\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::search (\begin{DoxyParamCaption}\item[{key\+Type}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Searches the tree for key k and returns a pointer to the node\textquotesingle{}s value. 
+
+This function searches the tree for key k and returns a pointer to the node\textquotesingle{}s value. If the key is not found, it returns nullptr. Time complexity\+: O(lg(size))
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key to search for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the value of the node with key k, or nullptr if the key is not found 
+\end{DoxyReturn}
+\Hypertarget{class_r_b_tree_a09d7087fc666f97b1f3f4f66192ced6c}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!select@{select}}
+\index{select@{select}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a09d7087fc666f97b1f3f4f66192ced6c} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+key\+Type \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::select (\begin{DoxyParamCaption}\item[{int}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Kth smallest element in the tree. 
+
+\begin{DoxyNote}{Note}
+This function currently is delegated to a function in the Node but should be migrated to the tree. This was done due to the original project specifications.
+\end{DoxyNote}
+This function returns the Kth smallest element in the tree. The Kth smallest element is the node with rank k. If k is out of bounds or not found, it returns nullptr.
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The rank of the smallest element to return\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the Kth smallest element in the tree, or nullptr if k is out of bounds 
+\end{DoxyReturn}
+\Hypertarget{class_r_b_tree_a641fbb2ef33d68c965204e19c9ea1b86}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!size@{size}}
+\index{size@{size}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_a641fbb2ef33d68c965204e19c9ea1b86} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+int \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the size of the tree. 
+
+\begin{DoxyReturn}{Returns}
+The size of the tree 
+\end{DoxyReturn}
+\Hypertarget{class_r_b_tree_ae2a0372b080a5307311f79751deafc87}\index{RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}!successor@{successor}}
+\index{successor@{successor}!RBTree$<$ keyType, valueType $>$@{RBTree$<$ keyType, valueType $>$}}
+\doxysubsubsection{\texorpdfstring{successor()}{successor()}}
+{\footnotesize\ttfamily \label{class_r_b_tree_ae2a0372b080a5307311f79751deafc87} 
+template$<$typename key\+Type, typename value\+Type$>$ \\
+key\+Type \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_r_b_tree}{RBTree}}$<$ key\+Type, value\+Type $>$\+::successor (\begin{DoxyParamCaption}\item[{key\+Type}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds the successor of the node with key k and returns a pointer to its key. 
+
+This function finds the successor of the node with key k. The successor is the smallest node in the right subtree. If the right child is null, it returns nullptr. Time complexity\+: O(lg(size))
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key of the node whose successor is to be found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the key of the successor node, or nullptr if there is no successor 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/jace/\+Documents/\+Git\+Hub/\+CPP-\/\+Structs-\/\+Algorithms/datastructs.\+hpp\end{DoxyCompactItemize}

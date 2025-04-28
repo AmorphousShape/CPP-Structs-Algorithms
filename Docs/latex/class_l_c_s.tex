@@ -1,0 +1,101 @@
+\doxysection{LCS Class Reference}
+\hypertarget{class_l_c_s}{}\label{class_l_c_s}\index{LCS@{LCS}}
+
+
+Finds the longest common subsequence (\doxylink{class_l_c_s}{LCS}) of two strings.  
+
+
+
+
+{\ttfamily \#include $<$algorithms.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_l_c_s_a9a7e328abf1512579203e36135718564}{LCS}} (std\+::string a, std\+::string b)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize the \doxylink{class_l_c_s}{LCS} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_l_c_s_a0720a034ba57afa120f44f140dd7e49a}{\texorpdfstring{$\sim$}{\string~}\+LCS}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_l_c_s}{LCS} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_l_c_s_aef78110c2c7820e153398481662d2ae8}{get}} ()
+\begin{DoxyCompactList}\small\item\em Retrieve the longest common subsequence of the two strings. \end{DoxyCompactList}\item 
+\Hypertarget{class_l_c_s_a7ea748b0ca0561880d92cdef60e1b09e}\label{class_l_c_s_a7ea748b0ca0561880d92cdef60e1b09e} 
+int {\bfseries lcs\+Length} ()
+\begin{DoxyCompactList}\small\item\em Get the length of the longest common subsequence. \end{DoxyCompactList}\item 
+\Hypertarget{class_l_c_s_a271ba340de2a0f00ebc3087b83884096}\label{class_l_c_s_a271ba340de2a0f00ebc3087b83884096} 
+void {\bfseries print\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Print the matrix used to find the \doxylink{class_l_c_s}{LCS}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_l_c_s_af3db3c4433752693f3d1e60d336a1f62}{new\+Strings}} (std\+::string a, std\+::string b)
+\begin{DoxyCompactList}\small\item\em Update the strings for which to find the \doxylink{class_l_c_s}{LCS}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Finds the longest common subsequence (\doxylink{class_l_c_s}{LCS}) of two strings. 
+
+Functions requiring the \doxylink{class_l_c_s}{LCS} will calculate it before returning. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_l_c_s_a9a7e328abf1512579203e36135718564}\index{LCS@{LCS}!LCS@{LCS}}
+\index{LCS@{LCS}!LCS@{LCS}}
+\doxysubsubsection{\texorpdfstring{LCS()}{LCS()}}
+{\footnotesize\ttfamily \label{class_l_c_s_a9a7e328abf1512579203e36135718564} 
+LCS\+::\+LCS (\begin{DoxyParamCaption}\item[{std\+::string}]{a}{, }\item[{std\+::string}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize the \doxylink{class_l_c_s}{LCS} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First std\+::string for which to find the \doxylink{class_l_c_s}{LCS} \\
+\hline
+{\em b} & Second std\+::string for which to find the \doxylink{class_l_c_s}{LCS} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_l_c_s_a0720a034ba57afa120f44f140dd7e49a}\index{LCS@{LCS}!````~LCS@{\texorpdfstring{$\sim$}{\string~}LCS}}
+\index{````~LCS@{\texorpdfstring{$\sim$}{\string~}LCS}!LCS@{LCS}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LCS()}{\string~LCS()}}
+{\footnotesize\ttfamily \label{class_l_c_s_a0720a034ba57afa120f44f140dd7e49a} 
+LCS\+::\texorpdfstring{$\sim$}{\string~}\+LCS (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for the \doxylink{class_l_c_s}{LCS} object. 
+
+Nothing special, but destructor should be declared even if empty 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_l_c_s_aef78110c2c7820e153398481662d2ae8}\index{LCS@{LCS}!get@{get}}
+\index{get@{get}!LCS@{LCS}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \label{class_l_c_s_aef78110c2c7820e153398481662d2ae8} 
+std\+::string LCS\+::get (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieve the longest common subsequence of the two strings. 
+
+\begin{DoxyReturn}{Returns}
+The longest common subsequence of the two strings 
+\end{DoxyReturn}
+\Hypertarget{class_l_c_s_af3db3c4433752693f3d1e60d336a1f62}\index{LCS@{LCS}!newStrings@{newStrings}}
+\index{newStrings@{newStrings}!LCS@{LCS}}
+\doxysubsubsection{\texorpdfstring{newStrings()}{newStrings()}}
+{\footnotesize\ttfamily \label{class_l_c_s_af3db3c4433752693f3d1e60d336a1f62} 
+void LCS\+::new\+Strings (\begin{DoxyParamCaption}\item[{std\+::string}]{a}{, }\item[{std\+::string}]{b}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Update the strings for which to find the \doxylink{class_l_c_s}{LCS}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & New first std\+::string for which to find the \doxylink{class_l_c_s}{LCS} \\
+\hline
+{\em b} & New second std\+::string for which to find the \doxylink{class_l_c_s}{LCS} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/jace/\+Documents/\+Git\+Hub/\+CPP-\/\+Structs-\/\+Algorithms/algorithms.\+hpp\end{DoxyCompactItemize}

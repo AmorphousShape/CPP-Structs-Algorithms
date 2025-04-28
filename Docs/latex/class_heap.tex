@@ -1,0 +1,120 @@
+\doxysection{Heap\texorpdfstring{$<$}{<} key\+Type \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_heap}{}\label{class_heap}\index{Heap$<$ keyType $>$@{Heap$<$ keyType $>$}}
+
+
+Implements a Minimum \doxylink{class_heap}{Heap}.  
+
+
+
+
+{\ttfamily \#include $<$datastructs.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_heap_a1dd98177c6b794cd18065edd649b4b18}\label{class_heap_a1dd98177c6b794cd18065edd649b4b18} 
+{\bfseries Heap} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_heap_aae9e5a74f56a896f55f71d03cd48a502}\label{class_heap_aae9e5a74f56a896f55f71d03cd48a502} 
+{\bfseries Heap} (key\+Type K\mbox{[}$\,$\mbox{]}, int s)
+\begin{DoxyCompactList}\small\item\em Constructs a heap with keys K and size s. \end{DoxyCompactList}\item 
+\Hypertarget{class_heap_a2e573a7c06f9c5ff24090bb851bfc2d1}\label{class_heap_a2e573a7c06f9c5ff24090bb851bfc2d1} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Heap} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_heap_a9e96a3c8247e4f35937b1a80433dd0c9}\label{class_heap_a9e96a3c8247e4f35937b1a80433dd0c9} 
+int {\bfseries size} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the heap. \end{DoxyCompactList}\item 
+key\+Type \mbox{\hyperlink{class_heap_a7f2c1c5df7735ad0ce30f02cb428fee1}{peek\+Key}} ()
+\begin{DoxyCompactList}\small\item\em Returns the minimum key in the heap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_heap_a180b441cbe865325a0d0d898678a582a}{insert}} (key\+Type k)
+\begin{DoxyCompactList}\small\item\em Inserts a new node with key k. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_heap_a10b33d8f49f7d1ffe8714e40091a238f}{print\+Keys}} (std\+::ostream \&out=std\+::cout)
+\begin{DoxyCompactList}\small\item\em Prints all keys in the heap in level order. \end{DoxyCompactList}\item 
+key\+Type \mbox{\hyperlink{class_heap_abe7e4eceddf03d0f9d36bfaccc4a0e0e}{extract\+Min}} ()
+\begin{DoxyCompactList}\small\item\em Removes the minimum key from the heap and restores heap priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename key\+Type$>$\newline
+class Heap$<$ key\+Type $>$}
+Implements a Minimum \doxylink{class_heap}{Heap}. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em key\+Type} & The type of key stored in the heap \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_heap_abe7e4eceddf03d0f9d36bfaccc4a0e0e}\index{Heap$<$ keyType $>$@{Heap$<$ keyType $>$}!extractMin@{extractMin}}
+\index{extractMin@{extractMin}!Heap$<$ keyType $>$@{Heap$<$ keyType $>$}}
+\doxysubsubsection{\texorpdfstring{extractMin()}{extractMin()}}
+{\footnotesize\ttfamily \label{class_heap_abe7e4eceddf03d0f9d36bfaccc4a0e0e} 
+template$<$typename key\+Type$>$ \\
+key\+Type \mbox{\hyperlink{class_heap}{Heap}}$<$ key\+Type $>$\+::extract\+Min (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes the minimum key from the heap and restores heap priority. 
+
+Time complexity\+: O(lg(n)), n = size
+
+\begin{DoxyReturn}{Returns}
+The minimum key 
+\end{DoxyReturn}
+\Hypertarget{class_heap_a180b441cbe865325a0d0d898678a582a}\index{Heap$<$ keyType $>$@{Heap$<$ keyType $>$}!insert@{insert}}
+\index{insert@{insert}!Heap$<$ keyType $>$@{Heap$<$ keyType $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_heap_a180b441cbe865325a0d0d898678a582a} 
+template$<$typename key\+Type$>$ \\
+void \mbox{\hyperlink{class_heap}{Heap}}$<$ key\+Type $>$\+::insert (\begin{DoxyParamCaption}\item[{key\+Type}]{k}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a new node with key k. 
+
+Time complexity\+: O(lg(n)), n = size
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The key to insert \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_heap_a7f2c1c5df7735ad0ce30f02cb428fee1}\index{Heap$<$ keyType $>$@{Heap$<$ keyType $>$}!peekKey@{peekKey}}
+\index{peekKey@{peekKey}!Heap$<$ keyType $>$@{Heap$<$ keyType $>$}}
+\doxysubsubsection{\texorpdfstring{peekKey()}{peekKey()}}
+{\footnotesize\ttfamily \label{class_heap_a7f2c1c5df7735ad0ce30f02cb428fee1} 
+template$<$typename key\+Type$>$ \\
+key\+Type \mbox{\hyperlink{class_heap}{Heap}}$<$ key\+Type $>$\+::peek\+Key (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the minimum key in the heap. 
+
+Time complexity\+: O(1)
+
+\begin{DoxyReturn}{Returns}
+The minimum key 
+\end{DoxyReturn}
+\Hypertarget{class_heap_a10b33d8f49f7d1ffe8714e40091a238f}\index{Heap$<$ keyType $>$@{Heap$<$ keyType $>$}!printKeys@{printKeys}}
+\index{printKeys@{printKeys}!Heap$<$ keyType $>$@{Heap$<$ keyType $>$}}
+\doxysubsubsection{\texorpdfstring{printKeys()}{printKeys()}}
+{\footnotesize\ttfamily \label{class_heap_a10b33d8f49f7d1ffe8714e40091a238f} 
+template$<$typename key\+Type$>$ \\
+void \mbox{\hyperlink{class_heap}{Heap}}$<$ key\+Type $>$\+::print\+Keys (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out}{ = {\ttfamily std\+:\+:cout}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints all keys in the heap in level order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & The output stream to print to, defaulting to std\+::cout \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/jace/\+Documents/\+Git\+Hub/\+CPP-\/\+Structs-\/\+Algorithms/datastructs.\+hpp\end{DoxyCompactItemize}
