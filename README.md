@@ -10,8 +10,8 @@ This repository contains two header files, `datastructs.hpp` and `algorithms.hpp
 
 1. [Overview](#overview)
 2. [Header Files](#header-files)
-   - [datastructs.h](#datastructsh)
-   - [algorithms.h](#algorithmsh)
+   - [datastructs.hpp](#datastructshpp)
+   - [algorithms.hpp](#algorithmshpp)
 3. [Usage](#usage)
 4. [Examples](#examples)
 
@@ -27,7 +27,7 @@ Detailed documentation is available on [GitHub Pages](https://amorphousshape.git
 
 ## Header Files
 
-### datastructs.h
+### datastructs.hpp
 
 This file contains implementations of the following data structures:
 
@@ -52,7 +52,7 @@ This file contains implementations of the following data structures:
 
 ---
 
-### algorithms.h
+### algorithms.hpp
 
 This file contains implementations of the following algorithms:
 
