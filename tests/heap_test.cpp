@@ -6,11 +6,11 @@
 
 int main() {
 
-    string A[10] = {"A", "B", "C", "D", "E", "F", "H", "I", "J", "K"};
+    std::string A[10] = {"A", "B", "C", "D", "E", "F", "H", "I", "J", "K"};
 	int B[10] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
 
 	Heap<int> T1, T2(B, 10);
-	ostringstream testingStream;
+	std::ostringstream testingStream;
 
 	T2.printKeys(testingStream);
 	assert(testingStream.str() == "1 2 4 3 6 5 8 10 7 9\n");

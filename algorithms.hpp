@@ -16,11 +16,9 @@
 #define ALGORITHMS_H
 
 #include <iostream>
-#include <vector>
 #include <climits>
+#include <vector>
 #include <ctime>
-
-using namespace std;
 
 /**
  * @brief All-Pairs Shortest Path (APSP) class
@@ -36,7 +34,7 @@ class APSP {
      * 
      * @details From row to col; int_max if no edge
      */
-    vector< vector<int> > adjacency;
+    std::vector< std::vector<int> > adjacency;
 
     /**
      * @brief Number of vertices in the graph
@@ -76,7 +74,7 @@ class APSP {
     void checkNegativeCycle() {
         for (int i = 0; i < n; i++) {
             if (adjacency[i][i] < 0) {
-                throw runtime_error("Negative cycle detected at vertex " + to_string(i) + "\n");
+                throw std::runtime_error("Negative cycle detected at vertex " + std::to_string(i) + "\n");
             }
         }
     }
@@ -94,7 +92,7 @@ class APSP {
         this->n = n;
         built = false;
         for (int i = 0; i < n; i++) {
-            vector<int> row;
+            std::vector<int> row;
             for (int j = 0; j < n; j++) {
                 if (i == j) {
                     row.push_back(0);
@@ -135,23 +133,23 @@ class APSP {
     /**
      * @brief Prints the adjacency matrix of the graph
      * 
-     * @param out Output stream to print to (default is cout)
+     * @param out Output stream to print to (default is std::cout)
      */
-    void printAdjacency(ostream &out = cout) {
+    void printAdjacency(std::ostream &out = std::cout) {
         if (!built) {
             build();
         }
 
         for (int i = 0; i < n; i++) {
-            cout << i + 1 << ": ";
+            std::cout << i + 1 << ": ";
             for (int j = 0; j < n; j++) {
                 if (adjacency[i][j] == INT_MAX) {
-                    cout << "inf ";
+                    std::cout << "inf ";
                     continue;
                 }
-                cout << adjacency[i][j] << " ";
+                std::cout << adjacency[i][j] << " ";
             }
-            cout << endl;
+            std::cout << std::endl;
         }
     }
 };
@@ -172,7 +170,7 @@ class Fib {
 
         // Check if number is too large for __uint128_t
         if (*n > 185) {
-            throw runtime_error("Fibonacci number too large for unsigned 128-bit int\n");
+            throw std::runtime_error("Fibonacci number too large for unsigned 128-bit int\n");
         }
 
         if (*n == 0) {
@@ -213,7 +211,7 @@ class Fib {
      * 
      * @param n The integer value for which to calculate and print the Fibonacci number
      */
-    void print(int n, ostream &out = cout) {
+    void print(int n, std::ostream &out = std::cout) {
 
         __uint128_t fibNum = fib(&n);
         if (fibNum == 0) {
@@ -221,13 +219,13 @@ class Fib {
             return;
         }
 
-        string fibString;
+        std::string fibString;
         while (fibNum > 0) {
             fibString.insert(fibString.begin(), '0' + (fibNum % 10));
             fibNum /= 10;
         }
 
-        out << "fib(" << n << ") = " << fibString << endl;
+        out << "fib(" << n << ") = " << fibString << std::endl;
     }
 
     /**
@@ -235,10 +233,10 @@ class Fib {
      * 
      * @param n Max number to print Fibonacci numbers for (inclusive) (max 185)
      */
-    void printAll(int n, ostream &out = cout) {
+    void printAll(int n, std::ostream &out = std::cout) {
 
         if (n > 185) {
-            throw runtime_error("Cannot print Fibonacci numbers greater than 185 with unsigned 128-bit int\n");
+            throw std::runtime_error("Cannot print Fibonacci numbers greater than 185 with unsigned 128-bit int\n");
         }
 
         // Print all fibonacci numbers up to n (inclusive)
@@ -286,7 +284,7 @@ class Knapsack {
     /**
      * @brief Dynamic programming table for the knapsack problem
      */
-    vector< vector<int> > table;
+    std::vector< std::vector<int> > table;
 
     /**
      * @brief Build the dynamic programming table for the knapsack problem
@@ -358,7 +356,7 @@ class Knapsack {
         profits = p;
 
         for (int i = 0; i <= n; i++) {
-            vector<int> temp;
+            std::vector<int> temp;
             for (int j = 0; j <= max; j++) {
                 temp.push_back(0);
             }
@@ -372,16 +370,16 @@ class Knapsack {
     void printTable() {
         for (int i = 0; i <= n; i++) {
             for (int j = 0; j <= max; j++) {
-                cout << table[i][j] << " ";
+                std::cout << table[i][j] << " ";
             }
-            cout << endl;
+            std::cout << std::endl;
         }
     }
 
     /**
      * @brief Print the profits, weights, and objects chosen for the knapsack problem
      */
-    void printPWO(ostream &out = cout) {
+    void printPWO(std::ostream &out = std::cout) {
         if (!built) {
             build();
         }
@@ -389,12 +387,12 @@ class Knapsack {
         for (int i = 1; i <= n; i++) {
             out << profits[i] << " ";
         }
-        out << endl;
+        out << std::endl;
         out << "Weight: ";
         for (int i = 1; i <= n; i++) {
             out << weights[i] << " ";
         }
-        out << endl;
+        out << std::endl;
         out << "Objects Chosen: ";
         for (int i = 1; i <= n; i++) {
             out << objects[i] << " ";
@@ -425,24 +423,24 @@ class LCS {
     private:
 
         /**
-         * @brief First string to find the LCS of
+         * @brief First std::string to find the LCS of
          */
-        string s1;
+        std::string s1;
         
         /**
-         * @brief Second string to find the LCS of
+         * @brief Second std::string to find the LCS of
          */
-        string s2;
+        std::string s2;
         
         /**
          * @brief Storage for the found LCS
          */
-        string foundLCS;
+        std::string foundLCS;
 
         /**
          * @brief Matrix to store LCS lengths
          */
-        vector< vector<int> > L;
+        std::vector< std::vector<int> > L;
 
         /**
          * @brief Indicates whether LCS has been built or not
@@ -457,7 +455,7 @@ class LCS {
          * 
          * @return The longest common subsequence built from the two strings
          */
-        string build(int j, int k) {
+        std::string build(int j, int k) {
             if (j == 0 || k == 0) {
                 return "";
             }
@@ -476,10 +474,10 @@ class LCS {
         /**
          * @brief Constructor to initialize the LCS object
          * 
-         * @param a First string for which to find the LCS
-         * @param b Second string for which to find the LCS
+         * @param a First std::string for which to find the LCS
+         * @param b Second std::string for which to find the LCS
          */
-        LCS(string a, string b) : s1(std::move(a)), s2(std::move(b)), built(false) {}
+        LCS(std::string a, std::string b) : s1(std::move(a)), s2(std::move(b)), built(false) {}
         
         /**
          * @brief Destructor for the LCS object
@@ -494,21 +492,21 @@ class LCS {
          * 
          * @return The longest common subsequence of the two strings
          */
-        string get() {
+        std::string get() {
             if (built) {
                 return foundLCS;
             }
     
             int n = s1.length();
             int m = s2.length();
-            L = vector<vector<int>>(n + 1, vector<int>(m + 1, 0));
+            L = std::vector<std::vector<int>>(n + 1, std::vector<int>(m + 1, 0));
     
             for (int j = 1; j <= n; j++) {
                 for (int k = 1; k <= m; k++) {
                     if (s1[j - 1] == s2[k - 1]) {
                         L[j][k] = L[j - 1][k - 1] + 1;
                     } else {
-                        L[j][k] = max(L[j - 1][k], L[j][k - 1]);
+                        L[j][k] = std::max(L[j - 1][k], L[j][k - 1]);
                     }
                 }
             }
@@ -538,22 +536,22 @@ class LCS {
                 get();
             }
 
-            cout << "Matrix L: " << endl;
+            std::cout << "Matrix L: " << std::endl;
             for (int i = 0; i <= s1.length(); i++) {
                 for (int j = 0; j <= s2.length(); j++) {
-                    cout << L[i][j] << " ";
+                    std::cout << L[i][j] << " ";
                 }
-                cout << endl;
+                std::cout << std::endl;
             }
         }
 
         /**
          * @brief Update the strings for which to find the LCS
          * 
-         * @param a New first string for which to find the LCS
-         * @param b New second string for which to find the LCS
+         * @param a New first std::string for which to find the LCS
+         * @param b New second std::string for which to find the LCS
          */
-        void newStrings(string a, string b) {
+        void newStrings(std::string a, std::string b) {
             s1 = a;
             s2 = b;
             built = false;
@@ -584,17 +582,17 @@ class Matrix {
     /**
      * @brief Data of the matrix
      */
-    vector< vector<int> > data;
+    std::vector< std::vector<int> > data;
 
     /**
      * @brief Default constructor
      */
-    Matrix(vector< vector<int> > m): row(m.at(0).size()), col(m.size()), data(m) {};
+    Matrix(std::vector< std::vector<int> > m): row(m.at(0).size()), col(m.size()), data(m) {};
 
     /**
      * @brief Constructor with dimensions; initializes the matrix with 0s
      */
-    Matrix(int r, int c) : row(r), col(c), data(r, vector<int>(c, 0)) {}
+    Matrix(int r, int c) : row(r), col(c), data(r, std::vector<int>(c, 0)) {}
 
     /**
      * @brief Equality operator for matrices
@@ -625,14 +623,14 @@ class Matrix {
     /**
      * @brief Prints the matrix
      * 
-     * @param out Output stream to print to (default is cout)
+     * @param out Output stream to print to (default is std::cout)
      */
-    void print(ostream &out = cout) {
+    void print(std::ostream &out = std::cout) {
         for (int i = 0; i < col; i++) {
             for (int j = 0; j < row; j++) {
                 out << data[i][j] << " ";
             }
-            out << endl;
+            out << std::endl;
         }
     }
 };
@@ -675,12 +673,12 @@ class MatrixChain {
     /**
      * @brief Dimensions of the matrices
      */
-    vector<int> dim;
+    std::vector<int> dim;
 
     /**
      * @brief Data of the matrices
      */
-    vector<Matrix*> data;
+    std::vector<Matrix*> data;
 
     /**
      * @brief Calculate the costs of multiplying the matrices
@@ -739,7 +737,7 @@ class MatrixChain {
     /**
      * @brief Copy constructor (deep copy)
      */
-    MatrixChain(vector<Matrix*> m) {
+    MatrixChain(std::vector<Matrix*> m) {
         n = m.size();
         calculated = false;
         solution = new Matrix(n, n);
@@ -756,10 +754,10 @@ class MatrixChain {
                 continue;
             }
             if (m[i-1]->col != m[i]->row) {
-                throw runtime_error(
-                    "Matrix dimensions do not match in MatrixChain constructor between matrices " + to_string(i-1) + " and " + to_string(i) + "\n" +
-                    "Col size of matrix " + to_string(i-1) + " (" + to_string(m[i-1]->col) + 
-                    ") != Row size of matrix " + to_string(i) + " (" + to_string(m[i]->row) + ")\n"
+                throw std::runtime_error(
+                    "Matrix dimensions do not match in MatrixChain constructor between matrices " + std::to_string(i-1) + " and " + std::to_string(i) + "\n" +
+                    "Col size of matrix " + std::to_string(i-1) + " (" + std::to_string(m[i-1]->col) + 
+                    ") != Row size of matrix " + std::to_string(i) + " (" + std::to_string(m[i]->row) + ")\n"
                 );
             }
         }
@@ -770,7 +768,7 @@ class MatrixChain {
      */
     void addMatrix(Matrix *m) {
         if (m->row != data[n - 1]->col) {
-            throw runtime_error("Matrix dimensions do not match in MatrixChain::addMatrix");
+            throw std::runtime_error("Matrix dimensions do not match in MatrixChain::addMatrix");
             return;
         }
 
@@ -805,10 +803,10 @@ class MatrixChain {
  * 
  * @return The probability matrix for the world series; index [i][j] is the probability A gets at least i wins and B gets at least j wins
  */
-vector<vector<double>> worldSeries(int n, double *aProb) {
+std::vector<std::vector<double>> worldSeries(int n, double *aProb) {
 
-    // Create matrix (Use vector as variable length array is not allowed in most compilers)
-    vector<vector<double>> x(n + 1, vector<double>(n + 1, 0.0));
+    // Create matrix (Use std::vector as variable length array is not allowed in most compilers)
+    std::vector<std::vector<double>> x(n + 1, std::vector<double>(n + 1, 0.0));
     
     for (int i = 0; i <= n; i++) {
         for (int j = 0; j <= n; j++) {

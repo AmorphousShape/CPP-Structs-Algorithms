@@ -14,8 +14,6 @@
 
 #include <iostream>
 
-using namespace std;
-
 /**
  * @brief Implements a circular dynamic array that can dynamically resize itself
  * 
@@ -662,16 +660,16 @@ template<typename keyType> class Heap {
     /**
      * @brief Prints all keys in the heap in level order
      * 
-     * @param out The output stream to print to, defaulting to cout
+     * @param out The output stream to print to, defaulting to std::cout
      */
-    void printKeys(ostream & out = cout) {
+    void printKeys(std::ostream &out = std::cout) {
         for (int i = 0; i < info->length(); i++) {
             out << (*info)[i];
             if (i != info->length() - 1) {
                 out << " ";
             }
         }
-        if (info->length() != 0) {out << endl;}
+        if (info->length() != 0) {out << std::endl;}
     }
 
     /**
@@ -969,7 +967,7 @@ template<typename keyType, typename valueType> class RBNode {
      * 
      * @param out The output stream to print, default is cout
      */
-    void preorder (ostream &out = cout) {
+    void preorder (std::ostream &out = std::cout) {
         if (key == nullptr) {
             return;
         }
@@ -983,7 +981,7 @@ template<typename keyType, typename valueType> class RBNode {
      * 
      * @param out The output stream to print, default is cout
      */
-    void inorder (ostream &out = cout) {
+    void inorder (std::ostream &out = std::cout) {
         if (key == nullptr) {
             return;
         }
@@ -997,7 +995,7 @@ template<typename keyType, typename valueType> class RBNode {
      * 
      * @param out The output stream to print, default is cout
      */
-    void postorder (ostream &out = cout) {
+    void postorder (std::ostream &out = std::cout) {
         if (key == nullptr) {
             return;
         }
@@ -1011,7 +1009,7 @@ template<typename keyType, typename valueType> class RBNode {
      * 
      * @param out The output stream to print, default is cout
      */
-    void printNode(ostream &out = cout) {
+    void printNode(std::ostream &out = std::cout) {
         if (key == nullptr) {
             return;
         }
@@ -1025,7 +1023,7 @@ template<typename keyType, typename valueType> class RBNode {
      * 
      * @param k The number of elements to print
      */
-    void printk(int &k, ostream &out = cout) {
+    void printk(int &k, std::ostream &out = std::cout) {
         if (l->key != nullptr) {
             l->printk(k, out);
             if (k > 0) {
@@ -1254,9 +1252,9 @@ template<typename keyType, typename valueType> class RBTree {
      * 
      * @details This function prints the preorder traversal of the tree. It calls the root's preorder function, which prints the nodes in preorder. Time complexity: O(n)
      */
-    void preorder (ostream &out) {
+    void preorder (std::ostream &out) {
         root->preorder(out);
-        out << endl;
+        out << std::endl;
     }
     
     /**
@@ -1264,9 +1262,9 @@ template<typename keyType, typename valueType> class RBTree {
      * 
      * @details This function prints the inorder traversal of the tree. It calls the root's inorder function, which prints the nodes in inorder. Time complexity: O(n)
      */
-    void inorder (ostream &out) {
+    void inorder (std::ostream &out) {
         root->inorder(out);
-        out << endl;
+        out << std::endl;
     }
 
     /**
@@ -1274,9 +1272,9 @@ template<typename keyType, typename valueType> class RBTree {
      * 
      * @details This function prints the postorder traversal of the tree. It calls the root's postorder function, which prints the nodes in postorder. Time complexity: O(n)
      */
-    void postorder (ostream &out) {
+    void postorder (std::ostream &out) {
         root->postorder(out);
-        out << endl;
+        out << std::endl;
     }
     
     /**
@@ -1284,9 +1282,9 @@ template<typename keyType, typename valueType> class RBTree {
      * 
      * @details This function prints the K smallest elements of the tree. It calls the root's printk function, which prints the K smallest elements in preorder traversal. Time complexity: O(k + lg(size))
      */
-    void printk (int k, ostream &out) {
+    void printk (int k, std::ostream &out) {
         root->printk(k, out);
-        out << endl;
+        out << std::endl;
     }
 
     /**

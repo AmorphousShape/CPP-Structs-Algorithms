@@ -13,7 +13,7 @@ int main() {
     // Test Case 1: All probabilities are 0.5
     {
         double probs[] = {0.5, 0.5, 0.5, 0.5, 0.5};
-        vector<vector<double>> wsMatrix = worldSeries(2, probs);
+        std::vector< std::vector<double> > wsMatrix = worldSeries(2, probs);
 
         assert(wsMatrix.size() == 3);
         for (int i = 0; i < 3; i++) {
@@ -35,7 +35,7 @@ int main() {
     // Test Case 2: Mixed probabilities
     {
         double probs[] = {0.6, 0.4, 0.7, 0.3, 0.5};
-        vector<vector<double>> wsMatrix = worldSeries(2, probs);
+        std::vector<std::vector<double>> wsMatrix = worldSeries(2, probs);
 
         assert(wsMatrix.size() == 3);
         for (int i = 0; i < 3; i++) {
@@ -54,7 +54,7 @@ int main() {
     // Test Case 3: A always wins
     {
         double probs[] = {1.0, 1.0, 1.0, 1.0, 1.0};
-        vector<vector<double>> wsMatrix = worldSeries(2, probs);
+        std::vector<std::vector<double>> wsMatrix = worldSeries(2, probs);
 
         assert(wsMatrix.size() == 3);
         for (int i = 0; i < 3; i++) {
@@ -79,7 +79,7 @@ int main() {
     // Test Case 4: A always loses
     {
         double probs[] = {0.0, 0.0, 0.0, 0.0, 0.0};
-        vector<vector<double>> wsMatrix = worldSeries(2, probs);
+        std::vector<std::vector<double>> wsMatrix = worldSeries(2, probs);
 
         assert(wsMatrix.size() == 3);
         for (int i = 0; i < 3; i++) {
